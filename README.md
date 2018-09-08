@@ -54,7 +54,7 @@
 
  # Gettin Started
 
- ##Prerequisites
+ ## Prerequisites
 
  ### ROS
 This project is developed using [ROS](http://wiki.ros.org/kinetic/Installation/Ubuntu):
