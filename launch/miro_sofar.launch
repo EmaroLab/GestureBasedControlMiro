@@ -1,0 +1,40 @@
+<launch>
+
+<!--REAL ROBOT OR SIMULATION -->
+<!-- Real miro = rob01 | Simulation miro = sim01 -->
+
+<param name="/robot_name" value="rob01" />
+
+<!--NODE RATE-->
+<param name = "rate" value="200" />
+
+<!--DANGER THRESHOLD -->
+<!-- Set the sonar value below which an obstacle is encoundered. From 0.01 to 1 -->
+<param name ="sonar_threshold" value = "0.3" />
+
+<!--SELECT CONTROL MODE -->
+<!-- control_mode = base for easy control, control_mode = advanced for more sensitive control -->
+
+<param name="control_mode" value="base" />
+
+
+<!-- MAPPING VALUES FROM SMARTWATCH -->
+
+<node name="imu_data_map" pkg="miro_sofar" type="imu_data_map.py" />
+
+<!-- GESTURE BASED BEHAVIOR -->
+
+<node name="gbb_miro" pkg="miro_sofar" type="gbb_miro.py" />
+
+<!-- OBSTACLE AVOIDANCE BEHAVIOR -->
+
+<node name="oab_miro" pkg="miro_sofar" type="oab_miro.py" />
+
+<!-- SWITCHING BEHAVIOR -->
+
+<node name="switching_behavior_miro" pkg="miro_sofar" type="switching_behavior_miro.py" />
+
+</launch>
+
+
+

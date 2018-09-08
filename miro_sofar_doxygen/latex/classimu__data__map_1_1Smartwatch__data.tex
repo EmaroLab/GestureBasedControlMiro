@@ -1,0 +1,64 @@
+\hypertarget{classimu__data__map_1_1Smartwatch__data}{}\section{imu\+\_\+data\+\_\+map.\+Smartwatch\+\_\+data Class Reference}
+\label{classimu__data__map_1_1Smartwatch__data}\index{imu\+\_\+data\+\_\+map.\+Smartwatch\+\_\+data@{imu\+\_\+data\+\_\+map.\+Smartwatch\+\_\+data}}
+
+
+cose sulla classe  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimu__data__map_1_1Smartwatch__data_a6d7e817bc4eaea9d4362ee8535aa3441}\label{classimu__data__map_1_1Smartwatch__data_a6d7e817bc4eaea9d4362ee8535aa3441}} 
+def \mbox{\hyperlink{classimu__data__map_1_1Smartwatch__data_a6d7e817bc4eaea9d4362ee8535aa3441}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classimu__data__map_1_1Smartwatch__data_ae90cc1ac064c75ea42f00bc34b168708}{callback\+\_\+smartwatch\+\_\+data}} (self, imu\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Callback function that when the data from the smartwatch are received maps them into linear and angular velocities. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimu__data__map_1_1Smartwatch__data_ab56e26ff9e095e112e4dd199a16b4478}\label{classimu__data__map_1_1Smartwatch__data_ab56e26ff9e095e112e4dd199a16b4478}} 
+def {\bfseries main} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classimu__data__map_1_1Smartwatch__data_af22e8905ef324d843378a1e21a6dbfd7}\label{classimu__data__map_1_1Smartwatch__data_af22e8905ef324d843378a1e21a6dbfd7}} 
+\mbox{\hyperlink{classimu__data__map_1_1Smartwatch__data_af22e8905ef324d843378a1e21a6dbfd7}{last\+\_\+acc}}
+\begin{DoxyCompactList}\small\item\em Last acelleration data received from smartwatch. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimu__data__map_1_1Smartwatch__data_a51d2bf263e711d2f46d0f3938876ab1b}\label{classimu__data__map_1_1Smartwatch__data_a51d2bf263e711d2f46d0f3938876ab1b}} 
+\mbox{\hyperlink{classimu__data__map_1_1Smartwatch__data_a51d2bf263e711d2f46d0f3938876ab1b}{mode}}
+\begin{DoxyCompactList}\small\item\em Control mode set from launch file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimu__data__map_1_1Smartwatch__data_afcc4c7dcd28ae253c4ba6d2f8b764a78}\label{classimu__data__map_1_1Smartwatch__data_afcc4c7dcd28ae253c4ba6d2f8b764a78}} 
+\mbox{\hyperlink{classimu__data__map_1_1Smartwatch__data_afcc4c7dcd28ae253c4ba6d2f8b764a78}{sub\+\_\+smartwatch}}
+\begin{DoxyCompactList}\small\item\em Subscriber to the topic /inertial a message of type Imu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classimu__data__map_1_1Smartwatch__data_a3241696498b139d0a102f1906dfad4d7}\label{classimu__data__map_1_1Smartwatch__data_a3241696498b139d0a102f1906dfad4d7}} 
+\mbox{\hyperlink{classimu__data__map_1_1Smartwatch__data_a3241696498b139d0a102f1906dfad4d7}{pub\+\_\+mapping}}
+\begin{DoxyCompactList}\small\item\em Publisher on the topic /imu\+\_\+mapping a message of type Twist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+cose sulla classe 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classimu__data__map_1_1Smartwatch__data_ae90cc1ac064c75ea42f00bc34b168708}\label{classimu__data__map_1_1Smartwatch__data_ae90cc1ac064c75ea42f00bc34b168708}} 
+\index{imu\+\_\+data\+\_\+map\+::\+Smartwatch\+\_\+data@{imu\+\_\+data\+\_\+map\+::\+Smartwatch\+\_\+data}!callback\+\_\+smartwatch\+\_\+data@{callback\+\_\+smartwatch\+\_\+data}}
+\index{callback\+\_\+smartwatch\+\_\+data@{callback\+\_\+smartwatch\+\_\+data}!imu\+\_\+data\+\_\+map\+::\+Smartwatch\+\_\+data@{imu\+\_\+data\+\_\+map\+::\+Smartwatch\+\_\+data}}
+\subsubsection{\texorpdfstring{callback\+\_\+smartwatch\+\_\+data()}{callback\_smartwatch\_data()}}
+{\footnotesize\ttfamily def imu\+\_\+data\+\_\+map.\+Smartwatch\+\_\+data.\+callback\+\_\+smartwatch\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{imu\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Callback function that when the data from the smartwatch are received maps them into linear and angular velocities. 
+
+Based on the value of the attribute mode, two different modalities of control are available ~\newline
+ {\bfseries{mode\+: base}}  It allows the user to exert three different types of control. They correspond to three gesture and therefore to specific ranges of linear acceleration values. ~\newline
+ The control gesture are\+: 
+\begin{DoxyItemize}
+\item {\itshape Stay Still} 
+\item {\itshape Turn Right/\+Left} 
+\item {\itshape Go Forward/\+Backward}
+\end{DoxyItemize} ~\newline
+ {\bfseries{mode\+: advanced}}  It allows the user to exert the basic types of control but also combination of them. ~\newline
+ All the linear acceleration values beetween the basic ranges are mapped as combination of linear and angular velocities. ~\newline
+{\itshape  e.\+g The control gesture combination could be Go Forward and Turn Right.}  
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/\mbox{\hyperlink{imu__data__map_8py}{imu\+\_\+data\+\_\+map.\+py}}\end{DoxyCompactItemize}

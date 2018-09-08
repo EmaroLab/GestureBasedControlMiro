@@ -1,0 +1,65 @@
+\hypertarget{classoab__miro_1_1ObstacleAvoidance}{}\section{oab\+\_\+miro.\+Obstacle\+Avoidance Class Reference}
+\label{classoab__miro_1_1ObstacleAvoidance}\index{oab\+\_\+miro.\+Obstacle\+Avoidance@{oab\+\_\+miro.\+Obstacle\+Avoidance}}
+
+
+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON OF T\+HE N\+O\+DE.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a4c09f48116e03a2ada68ee1babd82a9e}\label{classoab__miro_1_1ObstacleAvoidance_a4c09f48116e03a2ada68ee1babd82a9e}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a1fa593e0b629518b392e37b64025a468}\label{classoab__miro_1_1ObstacleAvoidance_a1fa593e0b629518b392e37b64025a468}} 
+def {\bfseries callback\+\_\+last\+\_\+command} (self, sw\+\_\+data)
+\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a292e590575d7e28589a60b9c83776fb6}\label{classoab__miro_1_1ObstacleAvoidance_a292e590575d7e28589a60b9c83776fb6}} 
+def {\bfseries callback\+\_\+oab} (self, sonar\+\_\+data)
+\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a36b64da5042fa20d2ddb98778c798aae}\label{classoab__miro_1_1ObstacleAvoidance_a36b64da5042fa20d2ddb98778c798aae}} 
+def {\bfseries main} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_ab6cfa8eebb476816919dfa2c95293309}\label{classoab__miro_1_1ObstacleAvoidance_ab6cfa8eebb476816919dfa2c95293309}} 
+{\bfseries robot\+\_\+name}
+\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a573396c9c743224c844822721bf163e1}\label{classoab__miro_1_1ObstacleAvoidance_a573396c9c743224c844822721bf163e1}} 
+{\bfseries obstacle}
+\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a918f768d96299a5f9e9c0f6425331755}\label{classoab__miro_1_1ObstacleAvoidance_a918f768d96299a5f9e9c0f6425331755}} 
+{\bfseries last\+\_\+command}
+\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a7983164a376933bfb9462c66481e8d23}\label{classoab__miro_1_1ObstacleAvoidance_a7983164a376933bfb9462c66481e8d23}} 
+{\bfseries counter}
+\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a9241219fb6f3e9f4e4a1117660c2833d}\label{classoab__miro_1_1ObstacleAvoidance_a9241219fb6f3e9f4e4a1117660c2833d}} 
+{\bfseries start\+\_\+dir}
+\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_aaf439db92c20b964e43a718a8c5f1c3d}\label{classoab__miro_1_1ObstacleAvoidance_aaf439db92c20b964e43a718a8c5f1c3d}} 
+{\bfseries danger\+\_\+threshold}
+\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_af2ca6b001b6d5072fae5bb2a8b82de71}\label{classoab__miro_1_1ObstacleAvoidance_af2ca6b001b6d5072fae5bb2a8b82de71}} 
+{\bfseries sub\+\_\+sonar\+\_\+data}
+\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a72496bf39cea30e8a13aebae68568c05}\label{classoab__miro_1_1ObstacleAvoidance_a72496bf39cea30e8a13aebae68568c05}} 
+{\bfseries sub\+\_\+imu\+\_\+data}
+\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a1bd2767cd869d8128e963ca793cfb1fc}\label{classoab__miro_1_1ObstacleAvoidance_a1bd2767cd869d8128e963ca793cfb1fc}} 
+{\bfseries pub\+\_\+platform\+\_\+control}
+\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a79c75ee545d131758304c200db00628d}\label{classoab__miro_1_1ObstacleAvoidance_a79c75ee545d131758304c200db00628d}} 
+{\bfseries body\+\_\+vel}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON OF T\+HE N\+O\+DE. 
+
+The node subscribes to the sonar and check the presence of an obstacle If the obstacle is present the strategy is to start turning in the direction given by the user through the smartwatch until no obstacle is present anymore More in details\+: Subscribe to the topic /platform/sensors Read the value from the sonar and check the presence of an obstacle if there is an obstacle implement the obstacle avoidance behaviour The obstacle avoidance behavior\+: Subscribe to the topic  save the last acceleration value if last acc\mbox{[}1\mbox{]}$>$ 0 save the right if last acc\mbox{[}1\mbox{]}$<$0 save the left Then Mi\+Ro starts turnin in the direction of the last value saved few degree each time the same obstacle is detected until there is no obstacle anymore 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/oab\+\_\+miro.\+py\end{DoxyCompactItemize}

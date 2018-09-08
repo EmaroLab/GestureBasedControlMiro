@@ -1,0 +1,32 @@
+\hypertarget{imu__data__map_8py}{}\section{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/imu\+\_\+data\+\_\+map.py File Reference}
+\label{imu__data__map_8py}\index{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/imu\+\_\+data\+\_\+map.\+py@{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/imu\+\_\+data\+\_\+map.\+py}}
+
+
+~\newline
+ The node subscribes to the smartwatch\textquotesingle{}s accelerometer data and publishes linear and angular velocities conveniently mapped.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classimu__data__map_1_1Smartwatch__data}{imu\+\_\+data\+\_\+map.\+Smartwatch\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em cose sulla classe \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{imu__data__map_8py_a6e9925760eab970d08aeb41bac2c0ace}\label{imu__data__map_8py_a6e9925760eab970d08aeb41bac2c0ace}} 
+{\bfseries imu\+\_\+data\+\_\+map.\+smartwatch} = Smartwatch\+\_\+data()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+~\newline
+ The node subscribes to the smartwatch\textquotesingle{}s accelerometer data and publishes linear and angular velocities conveniently mapped. 
+
+~\newline
+ More in details about the node\+: ~\newline
+ It subscribes to the topic /inertial ~\newline
+ It reads from that topic the values of linear accelerations along x and y ~\newline
+ It maps these accelerations into linear and angular velocities ~\newline
+ It publish on /imu\+\_\+mapping the mapped values ~\newline
+ Two modality are available\+: B\+A\+SE and A\+D\+V\+A\+N\+C\+ED and they can be selected from launch file 

@@ -1,0 +1,24 @@
+\hypertarget{gbb__miro_8py}{}\section{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/gbb\+\_\+miro.py File Reference}
+\label{gbb__miro_8py}\index{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/gbb\+\_\+miro.\+py@{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/gbb\+\_\+miro.\+py}}
+
+
+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON OF T\+HE N\+O\+DE The node subscribes to the linear and angular velocity mapped in the imu\+\_\+data\+\_\+map node and publish a platform\+\_\+control message A platform\+\_\+control message contains linear and angular velocities, the lightening pattern of miro\textquotesingle{}s body and other tipes of messages.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classgbb__miro_1_1GestureBased}{gbb\+\_\+miro.\+Gesture\+Based}}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{gbb__miro_8py_a516117c50bef7393f4b675194420b8c7}\label{gbb__miro_8py_a516117c50bef7393f4b675194420b8c7}} 
+{\bfseries gbb\+\_\+miro.\+gesture\+\_\+based} = Gesture\+Based()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON OF T\+HE N\+O\+DE The node subscribes to the linear and angular velocity mapped in the imu\+\_\+data\+\_\+map node and publish a platform\+\_\+control message A platform\+\_\+control message contains linear and angular velocities, the lightening pattern of miro\textquotesingle{}s body and other tipes of messages. 
+
+More in details\+: Subscribe to the topic /imu\+\_\+mapping read from that topic the value from the smartwatch correctly mapped into miro body velocity Publish on /gbb a platform\+\_\+control msg containing miro body velocity and a lightening pattern based on smartwatch commands For example\+: if the command of the smartwatch is a rotation towards right miro will turn right and the right part of its body will lit 
