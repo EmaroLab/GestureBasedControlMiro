@@ -139,13 +139,12 @@ The following command will start the project
 
 ```
 $ roslaunch miro_sofar miro_sofar.launch
-
 ```
 Parameters that can be set in the launch file ( all of them are explained inside the launch file itself):
-*robot_name <--  Select if use real miro or simulated robot in Gazebo
-*node_rate
-*control_mode <-- Select the BASIC or ADVANCED mode
-*sonar_treshold <-- Select the values below which an obstacle is detected
+* robot_name <--  Select if use real miro or simulated robot in Gazebo
+* node_rate
+* control_mode <-- Select the BASIC or ADVANCED mode
+* sonar_treshold <-- Select the values below which an obstacle is detected
 
 ## Acknowledgments
 
