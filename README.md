@@ -24,9 +24,9 @@
  In particular, depending on the accelerometer values are set some specific lights pattern of Miro's body and Miro's body linear and angular velocities.
  
  Two modalities of control are available: *BASIC* and *ADVANCED*
- The *BASIC* mode is basically a step control that allows Miro to stay still, rotate left/right, go straight forward/backward only. 
+ * The *BASIC* mode is basically a step control that allows Miro to stay still, rotate left/right, go straight forward/backward only. 
  This mode allows a novice user to start getting comfortable with the control gestures and with the Robot responsiveness.
- The *ADVANCED* mode allows a smoother but more sensitive control, enabling combination of basic commands. e.g turn left and go forward
+ * The *ADVANCED* mode allows a smoother but more sensitive control, enabling combination of basic commands. e.g turn left and go forward
  This mode allows an expert user to perform more complex trajectories and to exert a more natural control.
 
  The **Obstacle Avoidance behavior** overrides the Gesture Based behavior when and obstacle is detected by using the Robot's Sonar.
