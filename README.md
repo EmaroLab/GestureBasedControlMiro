@@ -47,10 +47,12 @@
  The *oab_miro* node subscibes to sonar sensor to detect the presence of an obstacle, and publish a message of type platform_control that contains miro body velocity and miro body lights pattern. 
  
  The *switching_behavior* node subscribes to both platform_control messages from gbb_miro and oab_miro that corresponds to the two different behaviors.
- It decide which behavior publish on the Robot depending on the presence or not of the obstacle.
+ It decides which behavior to publish on the Robot depending on the presence or not of the obstacle.
 
  This architecture has been developed to be modular and scalable, since each behavior can be easily modified or substituted, and new behaviours can be easily added.
  Starting from this software architecture another project has been developed with more and complex behaviors, e.g a more complete Obstacle Avoidance strategy based on BUG2 Algorithm has been used as Obstacle Avoidance behavior.
 
  #Gettin Started
+
+ cose
 
