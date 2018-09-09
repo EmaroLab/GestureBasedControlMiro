@@ -1,5 +1,10 @@
 \hypertarget{classgbb__miro_1_1GestureBased}{}\section{gbb\+\_\+miro.\+Gesture\+Based Class Reference}
 \label{classgbb__miro_1_1GestureBased}\index{gbb\+\_\+miro.\+Gesture\+Based@{gbb\+\_\+miro.\+Gesture\+Based}}
+
+
+The class \mbox{\hyperlink{classgbb__miro_1_1GestureBased}{Gesture\+Based}} implements the Gesture based behavior.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -7,24 +12,27 @@
 def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
 \item 
 \mbox{\Hypertarget{classgbb__miro_1_1GestureBased_a8e1b7b744c86c469224b221ba048c1eb}\label{classgbb__miro_1_1GestureBased_a8e1b7b744c86c469224b221ba048c1eb}} 
-def {\bfseries callback\+\_\+gbb} (self, vel\+\_\+msg)
-\item 
+def \mbox{\hyperlink{classgbb__miro_1_1GestureBased_a8e1b7b744c86c469224b221ba048c1eb}{callback\+\_\+gbb}} (self, vel\+\_\+msg)
+\begin{DoxyCompactList}\small\item\em Callback function that receive the Twist message and set the miro\textquotesingle{}s body lightening pattern to construct the platform\+\_\+control message to publish. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classgbb__miro_1_1GestureBased_a47f54767f7a09c1e316bfe935c553eb5}\label{classgbb__miro_1_1GestureBased_a47f54767f7a09c1e316bfe935c553eb5}} 
 def {\bfseries main} (self)
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classgbb__miro_1_1GestureBased_a7dcbe92c3a3f519aadb2100611307a4b}\label{classgbb__miro_1_1GestureBased_a7dcbe92c3a3f519aadb2100611307a4b}} 
-{\bfseries sub\+\_\+imu\+\_\+mapping}
-\item 
-\mbox{\Hypertarget{classgbb__miro_1_1GestureBased_a55c8badeade411056ded86b61cc10062}\label{classgbb__miro_1_1GestureBased_a55c8badeade411056ded86b61cc10062}} 
-{\bfseries pub\+\_\+platform\+\_\+control}
-\item 
 \mbox{\Hypertarget{classgbb__miro_1_1GestureBased_a843b6c194d6a1eaf1ebd1b64a9640029}\label{classgbb__miro_1_1GestureBased_a843b6c194d6a1eaf1ebd1b64a9640029}} 
-{\bfseries body\+\_\+vel}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classgbb__miro_1_1GestureBased_a843b6c194d6a1eaf1ebd1b64a9640029}{body\+\_\+vel}}
+\begin{DoxyCompactList}\small\item\em Linear and Angular velocities that will be part of the platform\+\_\+control message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgbb__miro_1_1GestureBased_a7dcbe92c3a3f519aadb2100611307a4b}\label{classgbb__miro_1_1GestureBased_a7dcbe92c3a3f519aadb2100611307a4b}} 
+\mbox{\hyperlink{classgbb__miro_1_1GestureBased_a7dcbe92c3a3f519aadb2100611307a4b}{sub\+\_\+imu\+\_\+mapping}}
+\begin{DoxyCompactList}\small\item\em Subscriber to the topic /imu\+\_\+mapping a message of type Twist. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgbb__miro_1_1GestureBased_a55c8badeade411056ded86b61cc10062}\label{classgbb__miro_1_1GestureBased_a55c8badeade411056ded86b61cc10062}} 
+\mbox{\hyperlink{classgbb__miro_1_1GestureBased_a55c8badeade411056ded86b61cc10062}{pub\+\_\+platform\+\_\+control}}
+\begin{DoxyCompactList}\small\item\em Publisher on the topic /gbb a message of type platform\+\_\+control which corresponds to the Gesture Based Behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+The class \mbox{\hyperlink{classgbb__miro_1_1GestureBased}{Gesture\+Based}} implements the Gesture based behavior. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

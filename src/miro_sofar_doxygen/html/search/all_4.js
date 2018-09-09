@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['last_5facc',['last_acc',['../classimu__data__map_1_1Smartwatch__data.html#af22e8905ef324d843378a1e21a6dbfd7',1,'imu_data_map::Smartwatch_data']]]
+  ['gbb_5fmiro_2epy',['gbb_miro.py',['../gbb__miro_8py.html',1,'']]],
+  ['gesturebased',['GestureBased',['../classgbb__miro_1_1GestureBased.html',1,'gbb_miro']]]
 ];

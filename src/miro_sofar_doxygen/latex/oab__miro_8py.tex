@@ -1,0 +1,23 @@
+\hypertarget{oab__miro_8py}{}\section{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/oab\+\_\+miro.py File Reference}
+\label{oab__miro_8py}\index{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/oab\+\_\+miro.\+py@{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/oab\+\_\+miro.\+py}}
+
+
+The node subscribes to the sonar and check the presence of an obstacle If the obstacle is present the strategy is to start turning in the direction given by the user through the smartwatch until no obstacle is present anymore More in details\+: Subscribe to the topic /platform/sensors Read the value from the sonar and check the presence of an obstacle if there is an obstacle implement the obstacle avoidance behaviour The obstacle avoidance behavior\+: Subscribe to the topic /inertial save the last acceleration value if last acc\mbox{[}1\mbox{]}$>$ 0 save the right if last acc\mbox{[}1\mbox{]}$<$0 save the left Then Mi\+Ro starts turnin in the direction of the last value saved few degree each time the same obstacle is detected until there is no obstacle anymore.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance}{oab\+\_\+miro.\+Obstacle\+Avoidance}}
+\begin{DoxyCompactList}\small\item\em The class \mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance}{Obstacle\+Avoidance}} implements the obstacle Avoidance Behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{oab__miro_8py_a099f22b22a31b3ff9bc537dc46dd7ffc}\label{oab__miro_8py_a099f22b22a31b3ff9bc537dc46dd7ffc}} 
+{\bfseries oab\+\_\+miro.\+oab} = Obstacle\+Avoidance()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The node subscribes to the sonar and check the presence of an obstacle If the obstacle is present the strategy is to start turning in the direction given by the user through the smartwatch until no obstacle is present anymore More in details\+: Subscribe to the topic /platform/sensors Read the value from the sonar and check the presence of an obstacle if there is an obstacle implement the obstacle avoidance behaviour The obstacle avoidance behavior\+: Subscribe to the topic /inertial save the last acceleration value if last acc\mbox{[}1\mbox{]}$>$ 0 save the right if last acc\mbox{[}1\mbox{]}$<$0 save the left Then Mi\+Ro starts turnin in the direction of the last value saved few degree each time the same obstacle is detected until there is no obstacle anymore. 
+

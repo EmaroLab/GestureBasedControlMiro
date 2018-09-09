@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['sub_5fsmartwatch',['sub_smartwatch',['../classimu__data__map_1_1Smartwatch__data.html#afcc4c7dcd28ae253c4ba6d2f8b764a78',1,'imu_data_map::Smartwatch_data']]]
+  ['last_5facc',['last_acc',['../classimu__data__map_1_1SmartwatchData.html#a03c21e5bb85eab7f5403536454bc7956',1,'imu_data_map::SmartwatchData']]],
+  ['last_5fcommand',['last_command',['../classoab__miro_1_1ObstacleAvoidance.html#a918f768d96299a5f9e9c0f6425331755',1,'oab_miro::ObstacleAvoidance']]]
 ];

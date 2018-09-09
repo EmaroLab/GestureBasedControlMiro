@@ -2,7 +2,7 @@
 
 ################################################################
 ## \file imu_data_map.py
-## @n The node subscribes to the smartwatch's accelerometer data and publishes linear and angular velocities conveniently mapped.
+## \brief The node subscribes to the smartwatch's accelerometer data and publish the linear and angular velocities conveniently mapped.
 ## @n More in details about the node:
 ## @n It subscribes to the topic /inertial
 ## @n It reads from that topic the values of linear accelerations along x and y
@@ -27,9 +27,10 @@ from miro_constants import miro
 
 from datetime import datetime
 
-## \brief cose sulla classe
+## \brief The Class SmartwatchData allows the subscription to the smartwatch's accelerometer data and publishing of the linear and angular velocities conveniently mapped.
 
-class Smartwatch_data():
+
+class SmartwatchData():
 
     ##Constructor
     def __init__(self):
@@ -117,6 +118,6 @@ class Smartwatch_data():
 
 if __name__=='__main__':
     rospy.init_node('imu_data_map')
-    smartwatch = Smartwatch_data()
+    smartwatch = SmartwatchData()
     smartwatch.main()
 

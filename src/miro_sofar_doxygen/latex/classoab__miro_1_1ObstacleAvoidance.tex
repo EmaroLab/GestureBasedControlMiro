@@ -2,7 +2,7 @@
 \label{classoab__miro_1_1ObstacleAvoidance}\index{oab\+\_\+miro.\+Obstacle\+Avoidance@{oab\+\_\+miro.\+Obstacle\+Avoidance}}
 
 
-D\+E\+S\+C\+R\+I\+P\+T\+I\+ON OF T\+HE N\+O\+DE.  
+The class \mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance}{Obstacle\+Avoidance}} implements the obstacle Avoidance Behavior.  
 
 
 \subsection*{Public Member Functions}
@@ -12,11 +12,10 @@ D\+E\+S\+C\+R\+I\+P\+T\+I\+ON OF T\+HE N\+O\+DE.
 def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
 \item 
 \mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a1fa593e0b629518b392e37b64025a468}\label{classoab__miro_1_1ObstacleAvoidance_a1fa593e0b629518b392e37b64025a468}} 
-def {\bfseries callback\+\_\+last\+\_\+command} (self, sw\+\_\+data)
-\item 
-\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a292e590575d7e28589a60b9c83776fb6}\label{classoab__miro_1_1ObstacleAvoidance_a292e590575d7e28589a60b9c83776fb6}} 
-def {\bfseries callback\+\_\+oab} (self, sonar\+\_\+data)
-\item 
+def \mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance_a1fa593e0b629518b392e37b64025a468}{callback\+\_\+last\+\_\+command}} (self, sw\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Callback function that receive and save the user\textquotesingle{}s command regarding in which direction start turning to avoid the obstacle. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance_a292e590575d7e28589a60b9c83776fb6}{callback\+\_\+oab}} (self, sonar\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Callback that receives the data from the robot sensors, and uses the information given by the sonar sensor to evaluate the presence of an obstacle. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a36b64da5042fa20d2ddb98778c798aae}\label{classoab__miro_1_1ObstacleAvoidance_a36b64da5042fa20d2ddb98778c798aae}} 
 def {\bfseries main} (self)
 \end{DoxyCompactItemize}
@@ -24,42 +23,56 @@ def {\bfseries main} (self)
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_ab6cfa8eebb476816919dfa2c95293309}\label{classoab__miro_1_1ObstacleAvoidance_ab6cfa8eebb476816919dfa2c95293309}} 
-{\bfseries robot\+\_\+name}
-\item 
+\mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance_ab6cfa8eebb476816919dfa2c95293309}{robot\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em Allow to switch from real robot to simulation from launch file. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a573396c9c743224c844822721bf163e1}\label{classoab__miro_1_1ObstacleAvoidance_a573396c9c743224c844822721bf163e1}} 
-{\bfseries obstacle}
-\item 
+\mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance_a573396c9c743224c844822721bf163e1}{obstacle}}
+\begin{DoxyCompactList}\small\item\em Signal if there is an obstacle or not. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a918f768d96299a5f9e9c0f6425331755}\label{classoab__miro_1_1ObstacleAvoidance_a918f768d96299a5f9e9c0f6425331755}} 
-{\bfseries last\+\_\+command}
-\item 
+\mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance_a918f768d96299a5f9e9c0f6425331755}{last\+\_\+command}}
+\begin{DoxyCompactList}\small\item\em Command suggested by the user to start turning towards left or right to avoid the obstacle. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a7983164a376933bfb9462c66481e8d23}\label{classoab__miro_1_1ObstacleAvoidance_a7983164a376933bfb9462c66481e8d23}} 
-{\bfseries counter}
-\item 
+\mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance_a7983164a376933bfb9462c66481e8d23}{counter}}
+\begin{DoxyCompactList}\small\item\em Counter that increase the each time the same obstacle is encoutered. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a9241219fb6f3e9f4e4a1117660c2833d}\label{classoab__miro_1_1ObstacleAvoidance_a9241219fb6f3e9f4e4a1117660c2833d}} 
-{\bfseries start\+\_\+dir}
-\item 
+\mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance_a9241219fb6f3e9f4e4a1117660c2833d}{start\+\_\+dir}}
+\begin{DoxyCompactList}\small\item\em Startig direction that depends on the last\+\_\+command given by the user. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_aaf439db92c20b964e43a718a8c5f1c3d}\label{classoab__miro_1_1ObstacleAvoidance_aaf439db92c20b964e43a718a8c5f1c3d}} 
-{\bfseries danger\+\_\+threshold}
-\item 
-\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_af2ca6b001b6d5072fae5bb2a8b82de71}\label{classoab__miro_1_1ObstacleAvoidance_af2ca6b001b6d5072fae5bb2a8b82de71}} 
-{\bfseries sub\+\_\+sonar\+\_\+data}
-\item 
-\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a72496bf39cea30e8a13aebae68568c05}\label{classoab__miro_1_1ObstacleAvoidance_a72496bf39cea30e8a13aebae68568c05}} 
-{\bfseries sub\+\_\+imu\+\_\+data}
-\item 
-\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a1bd2767cd869d8128e963ca793cfb1fc}\label{classoab__miro_1_1ObstacleAvoidance_a1bd2767cd869d8128e963ca793cfb1fc}} 
-{\bfseries pub\+\_\+platform\+\_\+control}
-\item 
+\mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance_aaf439db92c20b964e43a718a8c5f1c3d}{danger\+\_\+threshold}}
+\begin{DoxyCompactList}\small\item\em Sonar theshold below which an obstacle is encountered. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a79c75ee545d131758304c200db00628d}\label{classoab__miro_1_1ObstacleAvoidance_a79c75ee545d131758304c200db00628d}} 
-{\bfseries body\+\_\+vel}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance_a79c75ee545d131758304c200db00628d}{body\+\_\+vel}}
+\begin{DoxyCompactList}\small\item\em Linear and Angular velocities that will be part of the platform\+\_\+control message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_af2ca6b001b6d5072fae5bb2a8b82de71}\label{classoab__miro_1_1ObstacleAvoidance_af2ca6b001b6d5072fae5bb2a8b82de71}} 
+\mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance_af2ca6b001b6d5072fae5bb2a8b82de71}{sub\+\_\+sonar\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Subscriber to the topic /platform/sensors a message of type platform\+\_\+sensors that cointains the sonar readings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a72496bf39cea30e8a13aebae68568c05}\label{classoab__miro_1_1ObstacleAvoidance_a72496bf39cea30e8a13aebae68568c05}} 
+\mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance_a72496bf39cea30e8a13aebae68568c05}{sub\+\_\+imu\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Subscriber to the topic /inertial or better imu mapping a message of type I\+MU or Twist. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a1bd2767cd869d8128e963ca793cfb1fc}\label{classoab__miro_1_1ObstacleAvoidance_a1bd2767cd869d8128e963ca793cfb1fc}} 
+\mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance_a1bd2767cd869d8128e963ca793cfb1fc}{pub\+\_\+platform\+\_\+control}}
+\begin{DoxyCompactList}\small\item\em Publisher to the topic /oab a message of type platform\+\_\+control which corresponds to the Obstacle Avoidance Behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-D\+E\+S\+C\+R\+I\+P\+T\+I\+ON OF T\+HE N\+O\+DE. 
+The class \mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance}{Obstacle\+Avoidance}} implements the obstacle Avoidance Behavior. 
 
-The node subscribes to the sonar and check the presence of an obstacle If the obstacle is present the strategy is to start turning in the direction given by the user through the smartwatch until no obstacle is present anymore More in details\+: Subscribe to the topic /platform/sensors Read the value from the sonar and check the presence of an obstacle if there is an obstacle implement the obstacle avoidance behaviour The obstacle avoidance behavior\+: Subscribe to the topic  save the last acceleration value if last acc\mbox{[}1\mbox{]}$>$ 0 save the right if last acc\mbox{[}1\mbox{]}$<$0 save the left Then Mi\+Ro starts turnin in the direction of the last value saved few degree each time the same obstacle is detected until there is no obstacle anymore 
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classoab__miro_1_1ObstacleAvoidance_a292e590575d7e28589a60b9c83776fb6}\label{classoab__miro_1_1ObstacleAvoidance_a292e590575d7e28589a60b9c83776fb6}} 
+\index{oab\+\_\+miro\+::\+Obstacle\+Avoidance@{oab\+\_\+miro\+::\+Obstacle\+Avoidance}!callback\+\_\+oab@{callback\+\_\+oab}}
+\index{callback\+\_\+oab@{callback\+\_\+oab}!oab\+\_\+miro\+::\+Obstacle\+Avoidance@{oab\+\_\+miro\+::\+Obstacle\+Avoidance}}
+\subsubsection{\texorpdfstring{callback\+\_\+oab()}{callback\_oab()}}
+{\footnotesize\ttfamily def oab\+\_\+miro.\+Obstacle\+Avoidance.\+callback\+\_\+oab (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sonar\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Callback that receives the data from the robot sensors, and uses the information given by the sonar sensor to evaluate the presence of an obstacle. 
+
+~\newline
+ If an obstacle is detected then is used the information related to the user\textquotesingle{}s comand to start turning in one direction of few degree. ~\newline
+ Each time the same obstacle is detected the degrees respect to wich turns increases of a fixed quantity. ~\newline
+ This angular velocity and a red lightening pattern for Miro\textquotesingle{}s body are used to construct the platform\+\_\+control message to publish 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/oab\+\_\+miro.\+py\end{DoxyCompactItemize}
+/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/\mbox{\hyperlink{oab__miro_8py}{oab\+\_\+miro.\+py}}\end{DoxyCompactItemize}

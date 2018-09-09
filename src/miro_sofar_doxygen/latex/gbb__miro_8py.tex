@@ -2,14 +2,15 @@
 \label{gbb__miro_8py}\index{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/gbb\+\_\+miro.\+py@{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/gbb\+\_\+miro.\+py}}
 
 
-D\+E\+S\+C\+R\+I\+P\+T\+I\+ON OF T\+HE N\+O\+DE The node subscribes to the linear and angular velocity mapped in the imu\+\_\+data\+\_\+map node and publish a platform\+\_\+control message A platform\+\_\+control message contains linear and angular velocities, the lightening pattern of miro\textquotesingle{}s body and other tipes of messages.  
+The node subscribes to the linear and angular velocity mapped in the imu\+\_\+data\+\_\+map node and publish a platform\+\_\+control message ~\newline
+ A platform\+\_\+control message contains linear and angular velocities, the lightening pattern of miro\textquotesingle{}s body and other tipes of messages.  
 
 
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classgbb__miro_1_1GestureBased}{gbb\+\_\+miro.\+Gesture\+Based}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The class \mbox{\hyperlink{classgbb__miro_1_1GestureBased}{Gesture\+Based}} implements the Gesture based behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,6 +20,12 @@ class \mbox{\hyperlink{classgbb__miro_1_1GestureBased}{gbb\+\_\+miro.\+Gesture\+
 
 
 \subsection{Detailed Description}
-D\+E\+S\+C\+R\+I\+P\+T\+I\+ON OF T\+HE N\+O\+DE The node subscribes to the linear and angular velocity mapped in the imu\+\_\+data\+\_\+map node and publish a platform\+\_\+control message A platform\+\_\+control message contains linear and angular velocities, the lightening pattern of miro\textquotesingle{}s body and other tipes of messages. 
+The node subscribes to the linear and angular velocity mapped in the imu\+\_\+data\+\_\+map node and publish a platform\+\_\+control message ~\newline
+ A platform\+\_\+control message contains linear and angular velocities, the lightening pattern of miro\textquotesingle{}s body and other tipes of messages. 
 
-More in details\+: Subscribe to the topic /imu\+\_\+mapping read from that topic the value from the smartwatch correctly mapped into miro body velocity Publish on /gbb a platform\+\_\+control msg containing miro body velocity and a lightening pattern based on smartwatch commands For example\+: if the command of the smartwatch is a rotation towards right miro will turn right and the right part of its body will lit 
+~\newline
+ More in details\+: ~\newline
+ Subscribe to the topic /imu\+\_\+mapping ~\newline
+ Read from that topic the value from the smartwatch correctly mapped into miro body velocity ~\newline
+ Publish on /gbb a platform\+\_\+control msg containing miro body velocity and a lightening pattern based on smartwatch commands ~\newline
+ For example\+: if the command of the smartwatch is a rotation towards right miro will turn right and the right part of its body will lit 

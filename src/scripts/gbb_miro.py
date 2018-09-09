@@ -16,29 +16,39 @@ import sys
 from miro_constants import miro
 
 from datetime import datetime
+
 ## \file gbb_miro.py
-## DESCRIPTION OF THE NODE
-## The node subscribes to the linear and angular velocity mapped in the imu_data_map node and publish a platform_control message
-## A platform_control message contains linear and angular velocities, the lightening pattern of miro's body and other tipes of messages.
-##  More in details:
-##  Subscribe to the topic /imu_mapping
-## read from that topic the value from the smartwatch correctly mapped into miro body velocity
-##  Publish on /gbb a platform_control msg containing miro body velocity and a lightening pattern based on smartwatch commands
-##  For example: if the command of the smartwatch is a rotation towards right miro will turn right and the right part of its body will lit
+## \brief The node subscribes to the linear and angular velocity mapped in the imu_data_map node and publish a platform_control message
+## @n A platform_control message contains linear and angular velocities, the lightening pattern of miro's body and other tipes of messages.
+## @n More in details:
+## @n Subscribe to the topic /imu_mapping
+## @n Read from that topic the value from the smartwatch correctly mapped into miro body velocity
+## @n Publish on /gbb a platform_control msg containing miro body velocity and a lightening pattern based on smartwatch commands
+## @n For example: if the command of the smartwatch is a rotation towards right miro will turn right and the right part of its body will lit
+
+##\brief The class GestureBased implements the Gesture based behavior
 
 class GestureBased():
 
     def __init__(self):
+        
+        ## Linear and Angular velocities that will be part of the platform_control message
+        self.body_vel=Twist()
 
+        ## Subscriber to the topic /imu_mapping a message of type Twist
         self.sub_imu_mapping = rospy.Subscriber('/imu_mapping',Twist,self.callback_gbb,queue_size=1)
+
+        ## Publisher on the topic /gbb a message of type platform_control which corresponds to the Gesture Based Behavior
         self.pub_platform_control = rospy.Publisher('/gbb', platform_control, queue_size=0)
 
+
+    ## Callback function that receive the Twist message and set the miro's body lightening pattern to construct the platform_control message to publish
 
     def callback_gbb(self,vel_msg):
 
         q=platform_control()
 
-        self.body_vel=Twist()
+       
         self.body_vel.linear.x = vel_msg.linear.x
         self.body_vel.angular.z = vel_msg.angular.z
 
