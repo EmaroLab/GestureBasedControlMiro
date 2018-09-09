@@ -23,7 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Gesture-Based Control of MiRo
    </div>
-   <div id="projectbrief">The user can guide MiRo using a wearable device, a swartwatch with a 9-axis imu sensor. &lt;br&gt; The Robot can override the user&#39;s command when an obstacle is detected to avoid collision.</div>
+   <div id="projectbrief">The user can guide MiRo using a wearable device, a swartwatch with a 9-axis imu sensor.  The Robot can override the user&#39;s command when an obstacle is detected to avoid collision.</div>
   </td>
  </tr>
  </tbody>
@@ -69,13 +69,42 @@ $(function() {
 <div class="textblock"><h1><a class="anchor" id="aim_sec"></a>
 The aim of the Project</h1>
 <p class="">The aim of the project is to control the bio-inspired social Robot MiRo with a wearable device. In particular a smartwatch with a 9-axis Imu sensor. <br />
- The Robot should also be able to avoid collision with obstacle and override the user's control when an obstacle is detected. </p>
+ The Robot should also be able to avoid collision with obstacle and override the user's control when an obstacle is detected. <br />
+ This Project has been developed for the Software Architecture course of the master degree program in Robotics Engineering at University of Genoa. </p>
 <h1><a class="anchor" id="sofar_sec"></a>
 The Software architecture</h1>
-<h1><a class="anchor" id="gbb_sec"></a>
-Gesture Based Behavior</h1>
-<h1><a class="anchor" id="aob_sec"></a>
-Obstacle Avoidance Behavior</h1>
+<p class="">The software architecture developed for this project is based on a bio-inspired approach. <br />
+ The problem has been addressed by using a behaviour-based design pattern. <br />
+ <br />
+ This architecture has been developed to be modular and scalable, since each behavior can be easily modified or substituted, and new behaviours can be easily added. <br />
+ There are two possible MiRo behaviors addressed in this project: </p><ul>
+<li>
+Gesture Based behavior </li>
+<li>
+Obstacle Avoidance behavior</li>
+</ul>
+<h2><a class="anchor" id="gbb_sec"></a>
+Gesture Based Behavior</h2>
+<p class="">The <b>Gesture Based behavior</b> consists in MiRo following the user's command. <br />
+ Hence, the data from the smartwatch's accelerometer are converted into input for MiRo control. <br />
+ In particular, depending on the accelerometer values are set some specific lights pattern of Miro's body and Miro's body linear and angular velocities. <br />
+ Two modalities of control are available: <em>BASIC</em> and <em>ADVANCED</em> </p><ul>
+<li>
+The <em>BASIC</em> mode is basically a step control that allows Miro to stay still, rotate left/right, go straight forward/backward only. <br />
+ This mode allows a novice user to start getting comfortable with the control gestures and with the Robot responsiveness. </li>
+<li>
+The <em>ADVANCED</em> mode allows a smoother but more sensitive control, enabling combination of basic commands. e.g turn left and go forward <br />
+ This mode allows an expert user to perform more complex trajectories and to exert a more natural control.</li>
+</ul>
+<h2><a class="anchor" id="aob_sec"></a>
+Obstacle Avoidance Behavior</h2>
+<p class="">The <b>Obstacle Avoidance behavior</b> overrides the Gesture Based behavior when and obstacle is detected by using the Robot's Sonar. <br />
+ When an Obstacle is detected the Robot's body becomes red to signal the dangerous situation to the user. It starts turning of few degrees until the obstacle is not detected anymore. <br />
+ But, before this the user must suggest the robot in wich direction turning. Once the collision has been avoided the control goes back to the user. </p>
+<h2><a class="anchor" id="det_sec"></a>
+More in details about the architecture</h2>
+<p class="">Each Block of the architecture has been implemente as a ROS node. <br />
+ For comunication between the nodes has been used a Publish/Subscibe messaging pattern. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

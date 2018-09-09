@@ -23,7 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Gesture-Based Control of MiRo
    </div>
-   <div id="projectbrief">The user can guide MiRo using a wearable device, a swartwatch with a 9-axis imu sensor. &lt;br&gt; The Robot can override the user&#39;s command when an obstacle is detected to avoid collision.</div>
+   <div id="projectbrief">The user can guide MiRo using a wearable device, a swartwatch with a 9-axis imu sensor.  The Robot can override the user&#39;s command when an obstacle is detected to avoid collision.</div>
   </td>
  </tr>
  </tbody>
@@ -130,7 +130,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p class="">DESCRIPTION OF THE NODE. </p>
 <p class="">The node subscribes to the sonar and check the presence of an obstacle If the obstacle is present the strategy is to start turning in the direction given by the user through the smartwatch until no obstacle is present anymore More in details: Subscribe to the topic /platform/sensors Read the value from the sonar and check the presence of an obstacle if there is an obstacle implement the obstacle avoidance behaviour The obstacle avoidance behavior: Subscribe to the topic  save the last acceleration value if last acc[1]&gt; 0 save the right if last acc[1]&lt;0 save the left Then MiRo starts turnin in the direction of the last value saved few degree each time the same obstacle is detected until there is no obstacle anymore </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/emaro/catkin_ws/src/miro_sofar/src/oab_miro.py</li>
+<li>/home/emaro/catkin_ws/src/miro_sofar/src/scripts/oab_miro.py</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

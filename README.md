@@ -152,3 +152,6 @@ Parameters that can be set in the launch file ( all of them are explained inside
 * [imu_stream](https://github.com/EmaroLab/imu_stream)
 
 
+###Team
+* Roberta Delrio 
+* Sabrina Speranza
