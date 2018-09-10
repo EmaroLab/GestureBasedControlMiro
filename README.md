@@ -86,7 +86,7 @@ Not necessary to make static IP for your workstation (laptop) while setting up c
 Create a catkin workspace and clone all the packages in the src folder
 
 ```
-$ git clone https://github.com/hoodedapollo/MiroBehaviours.git
+$ git clone https://github.com/RobertaDelrio/GestureBasedControlMiro.git
 $ cd GestureBasedControlMiro
 $ catkin_make
 $ source devel/setup.bash
@@ -108,7 +108,7 @@ $ mosquitto
 Make sure that the IP in the IMU_stream app on the smartphone is the same showed by doing
 
 ```
-$ if config
+$ ifconfig
 ```
 
 Open the IMU_stream app on the smartwatch 
@@ -145,6 +145,9 @@ Parameters that can be set in the launch file ( all of them are explained inside
 * node_rate
 * control_mode <-- Select the BASIC or ADVANCED mode
 * sonar_treshold <-- Select the values below which an obstacle is detected
+
+## Works based on the current Project
+* Developement of a Pet-like Behavior for Miro Robot --> https://github.com/hoodedapollo/MiroBehaviours
 
 ## Acknowledgments
 
