@@ -2,8 +2,8 @@
 
 ################################################################
 ## \file imu_data_map.py
-## \brief The node subscribes to the smartwatch's accelerometer data and publish the linear and angular velocities conveniently mapped.
-## @n More in details about the node:
+## \brief The node imu_data_map.py subscribes to the smartwatch's accelerometer data and publish the linear and angular velocities conveniently mapped.
+## @n More in details:
 ## @n It subscribes to the topic /inertial
 ## @n It reads from that topic the values of linear accelerations along x and y
 ## @n It maps these accelerations into linear and angular velocities 

@@ -23,6 +23,8 @@ The {\bfseries{Gesture Based behavior}} consists in Mi\+Ro following the user\te
 \end{DoxyItemize}\hypertarget{index_aob_sec}{}\subsection{Obstacle Avoidance Behavior}\label{index_aob_sec}
 The {\bfseries{Obstacle Avoidance behavior}} overrides the Gesture Based behavior when and obstacle is detected by using the Robot\textquotesingle{}s Sonar. ~\newline
  When an Obstacle is detected the Robot\textquotesingle{}s body becomes red to signal the dangerous situation to the user. It starts turning of few degrees until the obstacle is not detected anymore. ~\newline
- But, before this the user must suggest the robot in wich direction turning. Once the collision has been avoided the control goes back to the user. \hypertarget{index_det_sec}{}\subsection{More in details about the architecture}\label{index_det_sec}
+ But, before this the user must suggest the robot in wich direction turning. Once the collision has been avoided the control goes back to the user. \hypertarget{index_det_sec}{}\subsection{More in details about the architecture and its implementation}\label{index_det_sec}
 Each Block of the architecture has been implemente as a R\+OS node. ~\newline
- For comunication between the nodes has been used a Publish/\+Subscibe messaging pattern. 
+ For comunication between the nodes has been used a Publish/\+Subscibe messaging pattern. ~\newline
+ The behavior have been implemented through a miro\+\_\+msg of type \href{https://consequential.bitbucket.io/platform_control.msg}\texttt{ platform\+\_\+control} ~\newline
+ In particular, each behavior sets the body\+\_\+vel (Miro Body\textquotesingle{}s velocity) and lights\+\_\+raw (Miro Body\textquotesingle{}s lightening pattern) 

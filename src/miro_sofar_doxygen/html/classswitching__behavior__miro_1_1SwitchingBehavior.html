@@ -75,65 +75,79 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>DESCRIPTION OF THE NODE The node allows to switch from the gesture based behaviour published by the gbb_miro and the obstacle avoidance behavior published by oab_miro The switch depends on the presence of an obstacle.  
+<p>The class <a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html" title="The class SwitchingBehavior allows to switch between the two possible behaviors based on the presence...">SwitchingBehavior</a> allows to switch between the two possible behaviors based on the presence of an obstacle.  
  <a href="classswitching__behavior__miro_1_1SwitchingBehavior.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ff242a8b8e3f6aa161760f8a1111410"><td class="memItemLeft" align="right" valign="top"><a id="a7ff242a8b8e3f6aa161760f8a1111410"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self)</td></tr>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#a7ff242a8b8e3f6aa161760f8a1111410">__init__</a> (self)</td></tr>
+<tr class="memdesc:a7ff242a8b8e3f6aa161760f8a1111410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
 <tr class="separator:a7ff242a8b8e3f6aa161760f8a1111410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2ec67fcfd236ad1be80f5085dd1aa21"><td class="memItemLeft" align="right" valign="top"><a id="aa2ec67fcfd236ad1be80f5085dd1aa21"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>callback_switching_condition</b> (self, sonar_data)</td></tr>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#aa2ec67fcfd236ad1be80f5085dd1aa21">callback_switching_condition</a> (self, sonar_data)</td></tr>
+<tr class="memdesc:aa2ec67fcfd236ad1be80f5085dd1aa21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback that receives the data from the robot sensors, and uses the information given by the sonar sensor to evaluate the presence of an obstacle. <br /></td></tr>
 <tr class="separator:aa2ec67fcfd236ad1be80f5085dd1aa21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae563101974a52b61eb45cdf6dfb9e4e8"><td class="memItemLeft" align="right" valign="top"><a id="ae563101974a52b61eb45cdf6dfb9e4e8"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>callback_gbb</b> (self, gbb)</td></tr>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#ae563101974a52b61eb45cdf6dfb9e4e8">callback_gbb</a> (self, gbb)</td></tr>
+<tr class="memdesc:ae563101974a52b61eb45cdf6dfb9e4e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback that receives the Gesture Based Behavior as a platform_control message. <br /></td></tr>
 <tr class="separator:ae563101974a52b61eb45cdf6dfb9e4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a224069e95b06f6eaa28448a6020f93ea"><td class="memItemLeft" align="right" valign="top"><a id="a224069e95b06f6eaa28448a6020f93ea"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>callback_oab</b> (self, oab)</td></tr>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#a224069e95b06f6eaa28448a6020f93ea">callback_oab</a> (self, oab)</td></tr>
+<tr class="memdesc:a224069e95b06f6eaa28448a6020f93ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback that receives the Obstacle Avoidance Behavior as a platform_control message. <br /></td></tr>
 <tr class="separator:a224069e95b06f6eaa28448a6020f93ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af98b244af11f28fd396ad9b518c270ff"><td class="memItemLeft" align="right" valign="top"><a id="af98b244af11f28fd396ad9b518c270ff"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>switching_behavior</b> (self)</td></tr>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#af98b244af11f28fd396ad9b518c270ff">switching_behavior</a> (self)</td></tr>
+<tr class="memdesc:af98b244af11f28fd396ad9b518c270ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that based on the value of the variable safe, that represent the presence of the obstacle, publish the behavior selected on Miro. <br /></td></tr>
 <tr class="separator:af98b244af11f28fd396ad9b518c270ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:af878fdeb3e899baf9cd30e25e7998044"><td class="memItemLeft" align="right" valign="top"><a id="af878fdeb3e899baf9cd30e25e7998044"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>robot_name</b></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#af878fdeb3e899baf9cd30e25e7998044">robot_name</a></td></tr>
+<tr class="memdesc:af878fdeb3e899baf9cd30e25e7998044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow to switch from real robot to simulation from launch file. <br /></td></tr>
 <tr class="separator:af878fdeb3e899baf9cd30e25e7998044"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1112b284035b50c5150a57caf8141a7a"><td class="memItemLeft" align="right" valign="top"><a id="a1112b284035b50c5150a57caf8141a7a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>rate</b></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#a1112b284035b50c5150a57caf8141a7a">rate</a></td></tr>
+<tr class="memdesc:a1112b284035b50c5150a57caf8141a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node rate. <br /></td></tr>
 <tr class="separator:a1112b284035b50c5150a57caf8141a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34015117ae228ea3fcc50aa3b8f7ad51"><td class="memItemLeft" align="right" valign="top"><a id="a34015117ae228ea3fcc50aa3b8f7ad51"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>danger_threshold</b></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#a34015117ae228ea3fcc50aa3b8f7ad51">danger_threshold</a></td></tr>
+<tr class="memdesc:a34015117ae228ea3fcc50aa3b8f7ad51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sonar theshold below which an obstacle is encountered. <br /></td></tr>
 <tr class="separator:a34015117ae228ea3fcc50aa3b8f7ad51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9fb625bc0cacabc182259c708b76f07"><td class="memItemLeft" align="right" valign="top"><a id="aa9fb625bc0cacabc182259c708b76f07"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>safe</b></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#aa9fb625bc0cacabc182259c708b76f07">safe</a></td></tr>
+<tr class="memdesc:aa9fb625bc0cacabc182259c708b76f07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal if there is an obstacle or not. <br /></td></tr>
 <tr class="separator:aa9fb625bc0cacabc182259c708b76f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37695a832fc2eda0b7d95921567dd730"><td class="memItemLeft" align="right" valign="top"><a id="a37695a832fc2eda0b7d95921567dd730"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>sub_sonar_data</b></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#a37695a832fc2eda0b7d95921567dd730">sub_sonar_data</a></td></tr>
+<tr class="memdesc:a37695a832fc2eda0b7d95921567dd730"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscriber to the topic /platform/sensors a message of type platform_sensors that cointains the sonar readings. <br /></td></tr>
 <tr class="separator:a37695a832fc2eda0b7d95921567dd730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcea4d81d5d5d8ac35e185be543c78c9"><td class="memItemLeft" align="right" valign="top"><a id="afcea4d81d5d5d8ac35e185be543c78c9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>q_gbb</b></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#afcea4d81d5d5d8ac35e185be543c78c9">q_gbb</a></td></tr>
+<tr class="memdesc:afcea4d81d5d5d8ac35e185be543c78c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">platform_control object that rapresents the Gesture Based Behavior <br /></td></tr>
 <tr class="separator:afcea4d81d5d5d8ac35e185be543c78c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4d22aa3a2e444bf596db816dcc6d7ba"><td class="memItemLeft" align="right" valign="top"><a id="af4d22aa3a2e444bf596db816dcc6d7ba"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>sub_gbb</b></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#af4d22aa3a2e444bf596db816dcc6d7ba">sub_gbb</a></td></tr>
+<tr class="memdesc:af4d22aa3a2e444bf596db816dcc6d7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscriber to the topic /gbb a message of type platform_control that rapresents the Gesture Based Behavior. <br /></td></tr>
 <tr class="separator:af4d22aa3a2e444bf596db816dcc6d7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6ecf6be83cdbd32e2467a4569b98c61"><td class="memItemLeft" align="right" valign="top"><a id="ab6ecf6be83cdbd32e2467a4569b98c61"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>q_oab</b></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#ab6ecf6be83cdbd32e2467a4569b98c61">q_oab</a></td></tr>
+<tr class="memdesc:ab6ecf6be83cdbd32e2467a4569b98c61"><td class="mdescLeft">&#160;</td><td class="mdescRight">platform_control object that rapresents the Obstacle Avoidance Behavior <br /></td></tr>
 <tr class="separator:ab6ecf6be83cdbd32e2467a4569b98c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91a3fb683593636854dbccfd053c4712"><td class="memItemLeft" align="right" valign="top"><a id="a91a3fb683593636854dbccfd053c4712"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>sub_oab</b></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#a91a3fb683593636854dbccfd053c4712">sub_oab</a></td></tr>
+<tr class="memdesc:a91a3fb683593636854dbccfd053c4712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscriber to the topic /oab a message of type platform_control that rapresents the Obstacle Avoidance Behavior. <br /></td></tr>
 <tr class="separator:a91a3fb683593636854dbccfd053c4712"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cddaa9fb7106bd6724c4276c58c0cee"><td class="memItemLeft" align="right" valign="top"><a id="a8cddaa9fb7106bd6724c4276c58c0cee"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>pub_behavior</b></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html#a8cddaa9fb7106bd6724c4276c58c0cee">pub_behavior</a></td></tr>
+<tr class="memdesc:a8cddaa9fb7106bd6724c4276c58c0cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publisher to the topic /platform/control on the robot a message of type platform_control that represents the selected behavior. <br /></td></tr>
 <tr class="separator:a8cddaa9fb7106bd6724c4276c58c0cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p class="">DESCRIPTION OF THE NODE The node allows to switch from the gesture based behaviour published by the gbb_miro and the obstacle avoidance behavior published by oab_miro The switch depends on the presence of an obstacle. </p>
-<p class="">More in details: Subscribe to the topic /platform/sensors Read the value from the sonar and check the presence of an obstacle Subscribe to the topic /gbb Subscribe to the topic /oab Publish the gesture based behavior on miro platform/control when an obstacle is encountered Publish the obstacle avoidance behavior on miro platform/control </p>
+<div class="textblock"><p class="">The class <a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html" title="The class SwitchingBehavior allows to switch between the two possible behaviors based on the presence...">SwitchingBehavior</a> allows to switch between the two possible behaviors based on the presence of an obstacle. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/emaro/catkin_ws/src/miro_sofar/src/scripts/switching_behavior_miro.py</li>
+<li>/home/emaro/catkin_ws/src/miro_sofar/src/scripts/<a class="el" href="switching__behavior__miro_8py.html">switching_behavior_miro.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

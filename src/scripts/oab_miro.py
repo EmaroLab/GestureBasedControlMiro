@@ -20,20 +20,20 @@ from miro_constants import miro
 from datetime import datetime
 
 
-##@file oab_miro.py
-## The node subscribes to the sonar and check the presence of an obstacle
-## If the obstacle is present the strategy is to start turning in the direction given by the user through the smartwatch until no obstacle is present anymore
-## More in details: 
-## Subscribe to the topic /platform/sensors
-## Read the value from the sonar and check the presence of an obstacle
-## if there is an obstacle implement the obstacle avoidance behaviour 
-## The obstacle avoidance behavior:
-## Subscribe to the topic /inertial
-## save the last acceleration value
-## if last acc[1]> 0 save the right
-## if last acc[1]<0 save the left
-## Then MiRo starts turnin in the direction of the last value saved 
-## few degree each time the same obstacle is detected until there is no obstacle anymore
+## \file oab_miro.py
+## \brief The node oab_miro.py subscribes to the sonar and check the presence of an obstacle
+## @n If the obstacle is present the strategy is to start turning in the direction given by the user through the smartwatch until no obstacle is present anymore.
+## @n More in details: 
+## @n Subscribe to the topic /platform/sensors
+## @n Read the value from the sonar and check the presence of an obstacle
+## @n if there is an obstacle implement the obstacle avoidance behaviour 
+## @n The obstacle avoidance behavior:
+## @n Subscribe to the topic /inertial
+## @n save the last acceleration value
+## @n if last acc[1]> 0 save the right
+## @n if last acc[1]<0 save the left
+## @n Then MiRo starts turnin in the direction of the last value saved 
+## @n few degree each time the same obstacle is detected until there is no obstacle anymore
 
 ##The class ObstacleAvoidance implements the obstacle Avoidance Behavior
 
@@ -75,7 +75,7 @@ class ObstacleAvoidance():
         
     ## Callback that receives the data from the robot sensors, and uses the information given by the sonar sensor to evaluate the presence of an obstacle.
     ## @n If an obstacle is detected then is used the information related to the user's comand to start turning in one direction of few degree.
-    ## @n Each time the same obstacle is detected the degrees respect to wich turns increases of a fixed quantity.
+    ## @n Each time the same obstacle is detected, the degrees respect to wich turns increases of a fixed quantity.
     ## @n This angular velocity and a red lightening pattern for Miro's body are used to construct the platform_control message to publish
 
     

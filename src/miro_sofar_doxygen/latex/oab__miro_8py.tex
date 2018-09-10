@@ -2,7 +2,8 @@
 \label{oab__miro_8py}\index{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/oab\+\_\+miro.\+py@{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/oab\+\_\+miro.\+py}}
 
 
-The node subscribes to the sonar and check the presence of an obstacle If the obstacle is present the strategy is to start turning in the direction given by the user through the smartwatch until no obstacle is present anymore More in details\+: Subscribe to the topic /platform/sensors Read the value from the sonar and check the presence of an obstacle if there is an obstacle implement the obstacle avoidance behaviour The obstacle avoidance behavior\+: Subscribe to the topic /inertial save the last acceleration value if last acc\mbox{[}1\mbox{]}$>$ 0 save the right if last acc\mbox{[}1\mbox{]}$<$0 save the left Then Mi\+Ro starts turnin in the direction of the last value saved few degree each time the same obstacle is detected until there is no obstacle anymore.  
+The node \mbox{\hyperlink{oab__miro_8py}{oab\+\_\+miro.\+py}} subscribes to the sonar and check the presence of an obstacle ~\newline
+ If the obstacle is present the strategy is to start turning in the direction given by the user through the smartwatch until no obstacle is present anymore.  
 
 
 \subsection*{Classes}
@@ -19,5 +20,18 @@ class \mbox{\hyperlink{classoab__miro_1_1ObstacleAvoidance}{oab\+\_\+miro.\+Obst
 
 
 \subsection{Detailed Description}
-The node subscribes to the sonar and check the presence of an obstacle If the obstacle is present the strategy is to start turning in the direction given by the user through the smartwatch until no obstacle is present anymore More in details\+: Subscribe to the topic /platform/sensors Read the value from the sonar and check the presence of an obstacle if there is an obstacle implement the obstacle avoidance behaviour The obstacle avoidance behavior\+: Subscribe to the topic /inertial save the last acceleration value if last acc\mbox{[}1\mbox{]}$>$ 0 save the right if last acc\mbox{[}1\mbox{]}$<$0 save the left Then Mi\+Ro starts turnin in the direction of the last value saved few degree each time the same obstacle is detected until there is no obstacle anymore. 
+The node \mbox{\hyperlink{oab__miro_8py}{oab\+\_\+miro.\+py}} subscribes to the sonar and check the presence of an obstacle ~\newline
+ If the obstacle is present the strategy is to start turning in the direction given by the user through the smartwatch until no obstacle is present anymore. 
 
+~\newline
+ More in details\+: ~\newline
+ Subscribe to the topic /platform/sensors ~\newline
+ Read the value from the sonar and check the presence of an obstacle ~\newline
+ if there is an obstacle implement the obstacle avoidance behaviour ~\newline
+ The obstacle avoidance behavior\+: ~\newline
+ Subscribe to the topic /inertial ~\newline
+ save the last acceleration value ~\newline
+ if last acc\mbox{[}1\mbox{]}$>$ 0 save the right ~\newline
+ if last acc\mbox{[}1\mbox{]}$<$0 save the left ~\newline
+ Then Mi\+Ro starts turnin in the direction of the last value saved ~\newline
+ few degree each time the same obstacle is detected until there is no obstacle anymore 

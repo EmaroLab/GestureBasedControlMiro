@@ -1,0 +1,33 @@
+\hypertarget{switching__behavior__miro_8py}{}\section{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/switching\+\_\+behavior\+\_\+miro.py File Reference}
+\label{switching__behavior__miro_8py}\index{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/switching\+\_\+behavior\+\_\+miro.\+py@{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/switching\+\_\+behavior\+\_\+miro.\+py}}
+
+
+The node \mbox{\hyperlink{switching__behavior__miro_8py}{switching\+\_\+behavior\+\_\+miro.\+py}} allows to switch from the gesture based behaviour published by the \mbox{\hyperlink{gbb__miro_8py}{gbb\+\_\+miro.\+py}} and the obstacle avoidance behavior published by \mbox{\hyperlink{oab__miro_8py}{oab\+\_\+miro.\+py}} ~\newline
+ The switch depends on the presence of an obstacle.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior}{switching\+\_\+behavior\+\_\+miro.\+Switching\+Behavior}}
+\begin{DoxyCompactList}\small\item\em The class \mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior}{Switching\+Behavior}} allows to switch between the two possible behaviors based on the presence of an obstacle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{switching__behavior__miro_8py_a6ee8b98239c003c6b8dfe1524819fee3}\label{switching__behavior__miro_8py_a6ee8b98239c003c6b8dfe1524819fee3}} 
+{\bfseries switching\+\_\+behavior\+\_\+miro.\+sb} = Switching\+Behavior()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The node \mbox{\hyperlink{switching__behavior__miro_8py}{switching\+\_\+behavior\+\_\+miro.\+py}} allows to switch from the gesture based behaviour published by the \mbox{\hyperlink{gbb__miro_8py}{gbb\+\_\+miro.\+py}} and the obstacle avoidance behavior published by \mbox{\hyperlink{oab__miro_8py}{oab\+\_\+miro.\+py}} ~\newline
+ The switch depends on the presence of an obstacle. 
+
+~\newline
+ More in details\+: ~\newline
+ Subscribe to the topic /platform/sensors ~\newline
+ Read the value from the sonar and check the presence of an obstacle ~\newline
+ Subscribe to the topic /gbb ~\newline
+ Subscribe to the topic /oab ~\newline
+ Publish the gesture based behavior on miro platform/control ~\newline
+ When an obstacle is encountered Publish the obstacle avoidance behavior on miro platform/control 

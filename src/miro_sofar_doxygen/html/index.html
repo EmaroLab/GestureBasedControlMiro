@@ -102,9 +102,11 @@ Obstacle Avoidance Behavior</h2>
  When an Obstacle is detected the Robot's body becomes red to signal the dangerous situation to the user. It starts turning of few degrees until the obstacle is not detected anymore. <br />
  But, before this the user must suggest the robot in wich direction turning. Once the collision has been avoided the control goes back to the user. </p>
 <h2><a class="anchor" id="det_sec"></a>
-More in details about the architecture</h2>
+More in details about the architecture and its implementation</h2>
 <p class="">Each Block of the architecture has been implemente as a ROS node. <br />
- For comunication between the nodes has been used a Publish/Subscibe messaging pattern. </p>
+ For comunication between the nodes has been used a Publish/Subscibe messaging pattern. <br />
+ The behavior have been implemented through a miro_msg of type <a href="https://consequential.bitbucket.io/platform_control.msg">platform_control</a> <br />
+ In particular, each behavior sets the body_vel (Miro Body's velocity) and lights_raw (Miro Body's lightening pattern) </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

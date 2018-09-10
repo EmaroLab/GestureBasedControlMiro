@@ -20,7 +20,8 @@
  * Gesture Based behavior
  * Obstacle Avoidance behavior
  
- The **Gesture Based behavior** consists in MiRo following the user's command. Hence, the data from the smartwatch's accelerometer are converted into input for MiRo control.
+ The **Gesture Based behavior** regards the robot's ability to follow the user's command. The user must wear a smartwatch in order to control
+Miro by performing specific gestures. Basically, the data from the smartwatch's accelerometer are converted into input for MiRo control.
  In particular, depending on the accelerometer values are set some specific lights pattern of Miro's body and Miro's body linear and angular velocities.
  
  Two modalities of control are available: *BASIC* and *ADVANCED*
@@ -36,11 +37,16 @@
 
  #### More in details about the architecture 
 
- Each Block of the architecture has been implemente as a ROS node.
+ Each module which is part of the architecture has been implemente as a ROS node.
 
  For comunication between the nodes has been used a Publish/Subscibe messaging pattern.
 
- The *imu_mapping* node subscribes to the smartwatch's accelerometer data, maps the linear accellerations into linear and angular velocities and publish them.
+In order to allow the smartwatch to communicate with the ROS Master, the imu
+stream app must be installed on both smartwatch and smartphone paired.
+The  imu stream  is  used  to  stream  IMU  data  from smartwatch to an MQTT broker.
+The  mqtt_ros_bridge is  a  bridge  that  allows  to subscribe to MQTT topics and publish contents of MQTT messages to ROS.
+
+ The *imu_mapping* node subscribes to the smartwatch's accelerometer data published by MQTT broker and maps the linear accellerations into linear and angular velocities and publish them.
 
  The *gbb_miro* node uses these velocities to publish a message of type platform_control that contains miro body velocity and miro body lights pattern.
 

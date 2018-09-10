@@ -18,8 +18,8 @@ from miro_constants import miro
 from datetime import datetime
 
 ## \file gbb_miro.py
-## \brief The node subscribes to the linear and angular velocity mapped in the imu_data_map node and publish a platform_control message
-## @n A platform_control message contains linear and angular velocities, the lightening pattern of miro's body and other tipes of messages.
+## \brief The node gbb_miro.py subscribes to the linear and angular velocity mapped in the imu_data_map node and publish a platform_control message
+## @n A platform_control message contains linear and angular velocities, the lightening pattern of miro's body and other tipes of messages @n.
 ## @n More in details:
 ## @n Subscribe to the topic /imu_mapping
 ## @n Read from that topic the value from the smartwatch correctly mapped into miro body velocity
@@ -29,7 +29,7 @@ from datetime import datetime
 ##\brief The class GestureBased implements the Gesture based behavior
 
 class GestureBased():
-
+    ## Constructor
     def __init__(self):
         
         ## Linear and Angular velocities that will be part of the platform_control message

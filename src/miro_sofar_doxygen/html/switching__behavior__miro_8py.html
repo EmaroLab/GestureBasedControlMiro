@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Gesture-Based Control of MiRo: /home/emaro/catkin_ws/src/miro_sofar/src/scripts/imu_data_map.py File Reference</title>
+<title>Gesture-Based Control of MiRo: /home/emaro/catkin_ws/src/miro_sofar/src/scripts/switching_behavior_miro.py File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,34 +70,37 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">imu_data_map.py File Reference</div>  </div>
+<div class="title">switching_behavior_miro.py File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>The node <a class="el" href="imu__data__map_8py.html" title="The node imu_data_map.py subscribes to the smartwatch&#39;s accelerometer data and publish the linear and...">imu_data_map.py</a> subscribes to the smartwatch's accelerometer data and publish the linear and angular velocities conveniently mapped.  
+<p>The node <a class="el" href="switching__behavior__miro_8py.html" title="The node switching_behavior_miro.py allows to switch from the gesture based behaviour published by th...">switching_behavior_miro.py</a> allows to switch from the gesture based behaviour published by the <a class="el" href="gbb__miro_8py.html" title="The node gbb_miro.py subscribes to the linear and angular velocity mapped in the imu_data_map node an...">gbb_miro.py</a> and the obstacle avoidance behavior published by <a class="el" href="oab__miro_8py.html" title="The node oab_miro.py subscribes to the sonar and check the presence of an obstacle   If the obstacle ...">oab_miro.py</a> <br />
+ The switch depends on the presence of an obstacle.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classimu__data__map_1_1SmartwatchData.html">imu_data_map.SmartwatchData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Class <a class="el" href="classimu__data__map_1_1SmartwatchData.html" title="The Class SmartwatchData allows the subscription to the smartwatch&#39;s accelerometer data and publishin...">SmartwatchData</a> allows the subscription to the smartwatch's accelerometer data and publishing of the linear and angular velocities conveniently mapped.  <a href="classimu__data__map_1_1SmartwatchData.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html">switching_behavior_miro.SwitchingBehavior</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The class <a class="el" href="classswitching__behavior__miro_1_1SwitchingBehavior.html" title="The class SwitchingBehavior allows to switch between the two possible behaviors based on the presence...">SwitchingBehavior</a> allows to switch between the two possible behaviors based on the presence of an obstacle.  <a href="classswitching__behavior__miro_1_1SwitchingBehavior.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a6e9925760eab970d08aeb41bac2c0ace"><td class="memItemLeft" align="right" valign="top"><a id="a6e9925760eab970d08aeb41bac2c0ace"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>imu_data_map.smartwatch</b> = SmartwatchData()</td></tr>
-<tr class="separator:a6e9925760eab970d08aeb41bac2c0ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ee8b98239c003c6b8dfe1524819fee3"><td class="memItemLeft" align="right" valign="top"><a id="a6ee8b98239c003c6b8dfe1524819fee3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>switching_behavior_miro.sb</b> = SwitchingBehavior()</td></tr>
+<tr class="separator:a6ee8b98239c003c6b8dfe1524819fee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p class="">The node <a class="el" href="imu__data__map_8py.html" title="The node imu_data_map.py subscribes to the smartwatch&#39;s accelerometer data and publish the linear and...">imu_data_map.py</a> subscribes to the smartwatch's accelerometer data and publish the linear and angular velocities conveniently mapped. </p>
+<div class="textblock"><p class="">The node <a class="el" href="switching__behavior__miro_8py.html" title="The node switching_behavior_miro.py allows to switch from the gesture based behaviour published by th...">switching_behavior_miro.py</a> allows to switch from the gesture based behaviour published by the <a class="el" href="gbb__miro_8py.html" title="The node gbb_miro.py subscribes to the linear and angular velocity mapped in the imu_data_map node an...">gbb_miro.py</a> and the obstacle avoidance behavior published by <a class="el" href="oab__miro_8py.html" title="The node oab_miro.py subscribes to the sonar and check the presence of an obstacle   If the obstacle ...">oab_miro.py</a> <br />
+ The switch depends on the presence of an obstacle. </p>
 <p class=""><br />
  More in details: <br />
- It subscribes to the topic /inertial <br />
- It reads from that topic the values of linear accelerations along x and y <br />
- It maps these accelerations into linear and angular velocities <br />
- It publish on /imu_mapping the mapped values <br />
- Two modality are available: BASE and ADVANCED and they can be selected from launch file </p>
+ Subscribe to the topic /platform/sensors <br />
+ Read the value from the sonar and check the presence of an obstacle <br />
+ Subscribe to the topic /gbb <br />
+ Subscribe to the topic /oab <br />
+ Publish the gesture based behavior on miro platform/control <br />
+ When an obstacle is encountered Publish the obstacle avoidance behavior on miro platform/control </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
