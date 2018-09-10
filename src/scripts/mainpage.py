@@ -26,8 +26,25 @@
 ## @n  When an Obstacle is detected the Robot's body becomes red to signal the dangerous situation to the user. It starts turning of few degrees until the obstacle is not detected anymore.
 ## @n But, before this the user must suggest the robot in wich direction turning.
 ## Once the collision has been avoided the control goes back to the user.
-## \subsection det_sec More in details about the architecture and its implementation
-## Each Block of the architecture has been implemente as a ROS node.
+## \section det_sec The implementation
+## The Robot Miro presents itself as a ROS node.
+## @n Each module of the architecture has been implemente as a ROS node.
 ## @n For comunication between the nodes has been used a Publish/Subscibe messaging pattern.
 ## @n The behavior have been implemented through a miro_msg of type <a href="https://consequential.bitbucket.io/platform_control.msg">platform_control</a> 
 ## @n In particular, each behavior sets the body_vel (Miro Body's velocity) and lights_raw (Miro Body's lightening pattern)
+## \subsection sum_dec Summary on nodes' functioning
+## In the File and Class documentation is provided a more deailed description about all the nodes.
+## @n
+## @n In order to allow the smartwatch to communicate with the ROS Master, the <a href="https://github.com/EmaroLab/imu_stream" >imu_stream</a> app must be installed on both smartwatch and smartphone paired.
+## @n The  imu_stream  is  used to stream IMU data from smartwatch to an MQTT broker.
+## @n The <a href="https://github.com/EmaroLab/mqtt_ros_bridge/tree/feature/multiple_smartwatches">mqtt_ros_bridge</a> is a bridge that allows to subscribe to MQTT topics and publish contents of MQTT messages to ROS.
+## @n @n The imu_data_map.py node subscribes to the  smartwatch’s accelerometer data, maps the linear accelerations into linear and angular velocities and publish them.
+## @n The gbb_miro.py node uses these velocities to publish a message of type platform_control.
+## @n The oab_miro.py node  subscribes  to  sonar  sensor  to detect  the  presence  of  an  obstacle,  and  publish  a message of type platform_control that contains Miro's body velocity and Miro's body lights pattern.
+## @n The switching_behavior_miro.py node  subscribes  to  both platform_control  messages  published  by  gbb_miro.py and oab_miro.py that corresponds to the two different behaviors.
+## @n It decides which behavior to publish on the Robot depending on the presence or not of the obstacle.
+##\section hiw_sec How to run the code
+## The code, the instructions about prerequisites and how to run the installation can be found on <a href="https://github.com/RobertaDelrio/GestureBasedControlMiro">GitHub</a>
+##\section team_sec The Team
+## Roberta Delrio: <i>roberta.delrio@studio.unibo.it</i>
+## @n Sabrina Speranza: <i>sabrina.speranza.ss.@gmail.com</i>

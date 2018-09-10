@@ -35,7 +35,7 @@ Miro by performing specific gestures. Basically, the data from the smartwatch's 
  But, before this the user must suggest the robot in wich direction turning.
  Once the collision has been avoided the control goes back to the user.
 
- #### More in details about the architecture 
+ ## The implementation 
 
  Each module which is part of the architecture has been implemente as a ROS node.
 
@@ -46,7 +46,7 @@ stream app must be installed on both smartwatch and smartphone paired.
 The  imu stream  is  used  to  stream  IMU  data  from smartwatch to an MQTT broker.
 The  mqtt_ros_bridge is  a  bridge  that  allows  to subscribe to MQTT topics and publish contents of MQTT messages to ROS.
 
- The *imu_mapping* node subscribes to the smartwatch's accelerometer data published by MQTT broker and maps the linear accellerations into linear and angular velocities and publish them.
+ The *imu_data_map* node subscribes to the smartwatch's accelerometer data published by MQTT broker and maps the linear accellerations into linear and angular velocities and publish them.
 
  The *gbb_miro* node uses these velocities to publish a message of type platform_control that contains miro body velocity and miro body lights pattern.
 
@@ -56,7 +56,7 @@ The  mqtt_ros_bridge is  a  bridge  that  allows  to subscribe to MQTT topics an
  It decides which behavior to publish on the Robot depending on the presence or not of the obstacle.
 
  This architecture has been developed to be modular and scalable, since each behavior can be easily modified or substituted, and new behaviours can be easily added.
- Starting from this software architecture another project has been developed with more and complex behaviors, e.g a more complete Obstacle Avoidance strategy based on BUG2 Algorithm has been used as Obstacle Avoidance behavior.
+ Starting from this software architecture another project has been developed with more and complex behaviors, *e.g a more complete Obstacle Avoidance strategy based on BUG2 Algorithm has been used as Obstacle Avoidance behavior.*
 
  # Gettin Started
 

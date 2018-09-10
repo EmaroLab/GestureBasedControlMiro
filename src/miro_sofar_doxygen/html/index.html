@@ -75,8 +75,8 @@ The aim of the Project</h1>
 The Software architecture</h1>
 <p class="">The software architecture developed for this project is based on a bio-inspired approach. <br />
  The problem has been addressed by using a behaviour-based design pattern. <br />
- <br />
- This architecture has been developed to be modular and scalable, since each behavior can be easily modified or substituted, and new behaviours can be easily added. <br />
+ ADD IMAGE <br />
+ This architecture has been developed to be modular and scalable, since each behavior can be conveniently modified or substituted, and new behaviours can be easily added. <br />
  There are two possible MiRo behaviors addressed in this project: </p><ul>
 <li>
 Gesture Based behavior </li>
@@ -85,7 +85,7 @@ Obstacle Avoidance behavior</li>
 </ul>
 <h2><a class="anchor" id="gbb_sec"></a>
 Gesture Based Behavior</h2>
-<p class="">The <b>Gesture Based behavior</b> consists in MiRo following the user's command. <br />
+<p class="">The <b>Gesture Based behavior</b> regards the robot's ability to follow the user's command. <br />
  Hence, the data from the smartwatch's accelerometer are converted into input for MiRo control. <br />
  In particular, depending on the accelerometer values are set some specific lights pattern of Miro's body and Miro's body linear and angular velocities. <br />
  Two modalities of control are available: <em>BASIC</em> and <em>ADVANCED</em> </p><ul>
@@ -101,12 +101,33 @@ Obstacle Avoidance Behavior</h2>
 <p class="">The <b>Obstacle Avoidance behavior</b> overrides the Gesture Based behavior when and obstacle is detected by using the Robot's Sonar. <br />
  When an Obstacle is detected the Robot's body becomes red to signal the dangerous situation to the user. It starts turning of few degrees until the obstacle is not detected anymore. <br />
  But, before this the user must suggest the robot in wich direction turning. Once the collision has been avoided the control goes back to the user. </p>
-<h2><a class="anchor" id="det_sec"></a>
-More in details about the architecture and its implementation</h2>
-<p class="">Each Block of the architecture has been implemente as a ROS node. <br />
+<h1><a class="anchor" id="det_sec"></a>
+The implementation</h1>
+<p class="">The Robot Miro presents itself as a ROS node. <br />
+ Each module of the architecture has been implemente as a ROS node. <br />
  For comunication between the nodes has been used a Publish/Subscibe messaging pattern. <br />
  The behavior have been implemented through a miro_msg of type <a href="https://consequential.bitbucket.io/platform_control.msg">platform_control</a> <br />
  In particular, each behavior sets the body_vel (Miro Body's velocity) and lights_raw (Miro Body's lightening pattern) </p>
+<h2><a class="anchor" id="sum_dec"></a>
+Summary on nodes' functioning</h2>
+<p class="">In the File and Class documentation is provided a more deailed description about all the nodes. <br />
+ <br />
+ In order to allow the smartwatch to communicate with the ROS Master, the <a href="https://github.com/EmaroLab/imu_stream">imu_stream</a> app must be installed on both smartwatch and smartphone paired. <br />
+ The imu_stream is used to stream IMU data from smartwatch to an MQTT broker. <br />
+ The <a href="https://github.com/EmaroLab/mqtt_ros_bridge/tree/feature/multiple_smartwatches">mqtt_ros_bridge</a> is a bridge that allows to subscribe to MQTT topics and publish contents of MQTT messages to ROS. <br />
+ <br />
+ The <a class="el" href="imu__data__map_8py.html" title="The node imu_data_map.py subscribes to the smartwatch&#39;s accelerometer data and publish the linear and...">imu_data_map.py</a> node subscribes to the smartwatch’s accelerometer data, maps the linear accelerations into linear and angular velocities and publish them. <br />
+ The <a class="el" href="gbb__miro_8py.html" title="The node gbb_miro.py subscribes to the linear and angular velocity mapped in the imu_data_map node an...">gbb_miro.py</a> node uses these velocities to publish a message of type platform_control. <br />
+ The <a class="el" href="oab__miro_8py.html" title="The node oab_miro.py subscribes to the sonar and check the presence of an obstacle   If the obstacle ...">oab_miro.py</a> node subscribes to sonar sensor to detect the presence of an obstacle, and publish a message of type platform_control that contains Miro's body velocity and Miro's body lights pattern. <br />
+ The <a class="el" href="switching__behavior__miro_8py.html" title="The node switching_behavior_miro.py allows to switch from the gesture based behaviour published by th...">switching_behavior_miro.py</a> node subscribes to both platform_control messages published by <a class="el" href="gbb__miro_8py.html" title="The node gbb_miro.py subscribes to the linear and angular velocity mapped in the imu_data_map node an...">gbb_miro.py</a> and <a class="el" href="oab__miro_8py.html" title="The node oab_miro.py subscribes to the sonar and check the presence of an obstacle   If the obstacle ...">oab_miro.py</a> that corresponds to the two different behaviors. <br />
+ It decides which behavior to publish on the Robot depending on the presence or not of the obstacle. </p>
+<h1><a class="anchor" id="hiw_sec"></a>
+How to run the code</h1>
+<p class="">The code, the instructions about prerequisites and how to run the installation can be found on <a href="https://github.com/RobertaDelrio/GestureBasedControlMiro">GitHub</a> </p>
+<h1><a class="anchor" id="team_sec"></a>
+The Team</h1>
+<p class="">Roberta Delrio: <em><a href="#" onclick="location.href='mai'+'lto:'+'rob'+'er'+'ta.'+'de'+'lri'+'o@'+'stu'+'di'+'o.u'+'ni'+'bo.'+'it'; return false;">rober<span style="display: none;">.nosp@m.</span>ta.d<span style="display: none;">.nosp@m.</span>elrio<span style="display: none;">.nosp@m.</span>@stu<span style="display: none;">.nosp@m.</span>dio.u<span style="display: none;">.nosp@m.</span>nibo<span style="display: none;">.nosp@m.</span>.it</a></em> <br />
+ Sabrina Speranza: <em><a href="#" onclick="location.href='mai'+'lto:'+'sab'+'ri'+'na.'+'sp'+'era'+'nz'+'a.s'+'s.'+'@gm'+'ai'+'l.c'+'om'; return false;">sabri<span style="display: none;">.nosp@m.</span>na.s<span style="display: none;">.nosp@m.</span>peran<span style="display: none;">.nosp@m.</span>za.s<span style="display: none;">.nosp@m.</span>s.@gm<span style="display: none;">.nosp@m.</span>ail.<span style="display: none;">.nosp@m.</span>com</a></em> </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
