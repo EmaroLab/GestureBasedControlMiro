@@ -38,7 +38,7 @@ class SmartwatchData():
         ##Last acelleration data received from smartwatch
         self.last_acc = [0,0,0]
         ##Control mode set from launch file
-        self.mode = rospy.get_param('control_mode', 'base')
+        self.mode = rospy.get_param('control_mode', 'basic')
         ##Subscriber to the topic /inertial a message of type Imu
         self.sub_smartwatch = rospy.Subscriber('/inertial',Imu,self.callback_smartwatch_data,queue_size=1)
         ##Publisher on the topic /imu_mapping a message of type Twist
@@ -46,7 +46,7 @@ class SmartwatchData():
     
     ## Callback function that when the data from the smartwatch are received maps them into linear and angular velocities.
     ## Based on the value of the attribute mode, two different modalities of control are available
-    ## @n <b>mode: base</b>
+    ## @n <b>mode: basic</b>
     ## <div style="margin-left:40px;">
     ## It allows the user to exert three different types of control. 
     ## They correspond to three gesture and therefore to specific ranges of linear acceleration values.
@@ -107,7 +107,7 @@ class SmartwatchData():
 
             q = sw_vel
 
-        if self.mode == 'base':
+        if self.mode == 'basic':
 
             q = s_vel
         

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/emaro/catkin_ws/src/miro_sofar/install/setup.sh

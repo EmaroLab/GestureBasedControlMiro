@@ -1,0 +1,8 @@
+prefix=/home/emaro/catkin_ws/src/miro_sofar/install
+
+Name: miro_sofar
+Description: Description of miro_sofar
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/emaro/catkin_ws/src/miro_sofar/install/lib 
+Requires: 

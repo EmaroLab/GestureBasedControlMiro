@@ -13,9 +13,9 @@
 <param name ="sonar_threshold" value = "0.3" />
 
 <!--SELECT CONTROL MODE -->
-<!-- control_mode = base for easy control, control_mode = advanced for more sensitive control -->
+<!-- control_mode = basic for easy control, control_mode = advanced for more sensitive control -->
 
-<param name="control_mode" value="base" />
+<param name="control_mode" value="advanced" />
 
 
 <!-- MAPPING VALUES FROM SMARTWATCH -->
