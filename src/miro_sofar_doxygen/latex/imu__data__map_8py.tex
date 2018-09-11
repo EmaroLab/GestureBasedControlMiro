@@ -1,0 +1,30 @@
+\hypertarget{imu__data__map_8py}{}\section{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/imu\+\_\+data\+\_\+map.py File Reference}
+\label{imu__data__map_8py}\index{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/imu\+\_\+data\+\_\+map.\+py@{/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/imu\+\_\+data\+\_\+map.\+py}}
+
+
+The node \mbox{\hyperlink{imu__data__map_8py}{imu\+\_\+data\+\_\+map.\+py}} subscribes to the smartwatch\textquotesingle{}s accelerometer data and publish the linear and angular velocities conveniently mapped.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classimu__data__map_1_1SmartwatchData}{imu\+\_\+data\+\_\+map.\+Smartwatch\+Data}}
+\begin{DoxyCompactList}\small\item\em The Class \mbox{\hyperlink{classimu__data__map_1_1SmartwatchData}{Smartwatch\+Data}} allows the subscription to the smartwatch\textquotesingle{}s accelerometer data and publishing of the linear and angular velocities conveniently mapped. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{imu__data__map_8py_a6e9925760eab970d08aeb41bac2c0ace}\label{imu__data__map_8py_a6e9925760eab970d08aeb41bac2c0ace}} 
+{\bfseries imu\+\_\+data\+\_\+map.\+smartwatch} = Smartwatch\+Data()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The node \mbox{\hyperlink{imu__data__map_8py}{imu\+\_\+data\+\_\+map.\+py}} subscribes to the smartwatch\textquotesingle{}s accelerometer data and publish the linear and angular velocities conveniently mapped. 
+
+~\newline
+ More in details\+: ~\newline
+ It subscribes to the topic /inertial ~\newline
+ It reads from that topic the values of linear accelerations along x and y ~\newline
+ It maps these accelerations into linear and angular velocities ~\newline
+ It publish on /imu\+\_\+mapping the mapped values ~\newline
+ Two modality are available\+: B\+A\+SE and A\+D\+V\+A\+N\+C\+ED and they can be selected from launch file 

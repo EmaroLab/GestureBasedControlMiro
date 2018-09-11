@@ -1,0 +1,45 @@
+\hypertarget{index_aim_sec}{}\section{The aim of the Project}\label{index_aim_sec}
+The aim of the project is to control the bio-\/inspired social Robot Mi\+Ro with a wearable device. In particular a smartwatch with a 9-\/axis Imu sensor. ~\newline
+ The Robot should also be able to avoid collision with obstacle and override the user\textquotesingle{}s control when an obstacle is detected. ~\newline
+ This Project has been developed for the Software Architecture course of the master degree program in Robotics Engineering at University of Genoa. \hypertarget{index_sofar_sec}{}\section{The Software architecture}\label{index_sofar_sec}
+The software architecture developed for this project is based on a bio-\/inspired approach. ~\newline
+ The problem has been addressed by using a behaviour-\/based design pattern. ~\newline
+ A\+DD I\+M\+A\+GE ~\newline
+ This architecture has been developed to be modular and scalable, since each behavior can be conveniently modified or substituted, and new behaviours can be easily added. ~\newline
+ There are two possible Mi\+Ro behaviors addressed in this project\+: 
+\begin{DoxyItemize}
+\item Gesture Based behavior 
+\item Obstacle Avoidance behavior
+\end{DoxyItemize}\hypertarget{index_gbb_sec}{}\subsection{Gesture Based Behavior}\label{index_gbb_sec}
+The {\bfseries{Gesture Based behavior}} regards the robot\textquotesingle{}s ability to follow the user\textquotesingle{}s command. ~\newline
+ Hence, the data from the smartwatch\textquotesingle{}s accelerometer are converted into input for Mi\+Ro control. ~\newline
+ In particular, depending on the accelerometer values are set some specific lights pattern of Miro\textquotesingle{}s body and Miro\textquotesingle{}s body linear and angular velocities. ~\newline
+ Two modalities of control are available\+: {\itshape B\+A\+S\+IC} and {\itshape A\+D\+V\+A\+N\+C\+ED} 
+\begin{DoxyItemize}
+\item The {\itshape B\+A\+S\+IC} mode is basically a step control that allows Miro to stay still, rotate left/right, go straight forward/backward only. ~\newline
+ This mode allows a novice user to start getting comfortable with the control gestures and with the Robot responsiveness. 
+\item The {\itshape A\+D\+V\+A\+N\+C\+ED} mode allows a smoother but more sensitive control, enabling combination of basic commands. e.\+g turn left and go forward ~\newline
+ This mode allows an expert user to perform more complex trajectories and to exert a more natural control.
+\end{DoxyItemize}\hypertarget{index_aob_sec}{}\subsection{Obstacle Avoidance Behavior}\label{index_aob_sec}
+The {\bfseries{Obstacle Avoidance behavior}} overrides the Gesture Based behavior when and obstacle is detected by using the Robot\textquotesingle{}s Sonar. ~\newline
+ When an Obstacle is detected the Robot\textquotesingle{}s body becomes red to signal the dangerous situation to the user. It starts turning of few degrees until the obstacle is not detected anymore. ~\newline
+ But, before this the user must suggest the robot in wich direction turning. Once the collision has been avoided the control goes back to the user. \hypertarget{index_det_sec}{}\section{The implementation}\label{index_det_sec}
+The Robot Miro presents itself as a R\+OS node. ~\newline
+ Each module of the architecture has been implemente as a R\+OS node. ~\newline
+ For comunication between the nodes has been used a Publish/\+Subscibe messaging pattern. ~\newline
+ The behavior have been implemented through a miro\+\_\+msg of type \href{https://consequential.bitbucket.io/platform_control.msg}\texttt{ platform\+\_\+control} ~\newline
+ In particular, each behavior sets the body\+\_\+vel (Miro Body\textquotesingle{}s velocity) and lights\+\_\+raw (Miro Body\textquotesingle{}s lightening pattern) \hypertarget{index_sum_dec}{}\subsection{Summary on nodes\textquotesingle{} functioning}\label{index_sum_dec}
+In the File and Class documentation is provided a more deailed description about all the nodes. ~\newline
+ ~\newline
+ In order to allow the smartwatch to communicate with the R\+OS Master, the \href{https://github.com/EmaroLab/imu_stream}\texttt{ imu\+\_\+stream} app must be installed on both smartwatch and smartphone paired. ~\newline
+ The imu\+\_\+stream is used to stream I\+MU data from smartwatch to an M\+Q\+TT broker. ~\newline
+ The \href{https://github.com/EmaroLab/mqtt_ros_bridge/tree/feature/multiple_smartwatches}\texttt{ mqtt\+\_\+ros\+\_\+bridge} is a bridge that allows to subscribe to M\+Q\+TT topics and publish contents of M\+Q\+TT messages to R\+OS. ~\newline
+ ~\newline
+ The \mbox{\hyperlink{imu__data__map_8py}{imu\+\_\+data\+\_\+map.\+py}} node subscribes to the smartwatch’s accelerometer data, maps the linear accelerations into linear and angular velocities and publish them. ~\newline
+ The \mbox{\hyperlink{gbb__miro_8py}{gbb\+\_\+miro.\+py}} node uses these velocities to publish a message of type platform\+\_\+control. ~\newline
+ The \mbox{\hyperlink{oab__miro_8py}{oab\+\_\+miro.\+py}} node subscribes to sonar sensor to detect the presence of an obstacle, and publish a message of type platform\+\_\+control that contains Miro\textquotesingle{}s body velocity and Miro\textquotesingle{}s body lights pattern. ~\newline
+ The \mbox{\hyperlink{switching__behavior__miro_8py}{switching\+\_\+behavior\+\_\+miro.\+py}} node subscribes to both platform\+\_\+control messages published by \mbox{\hyperlink{gbb__miro_8py}{gbb\+\_\+miro.\+py}} and \mbox{\hyperlink{oab__miro_8py}{oab\+\_\+miro.\+py}} that corresponds to the two different behaviors. ~\newline
+ It decides which behavior to publish on the Robot depending on the presence or not of the obstacle. \hypertarget{index_hiw_sec}{}\section{How to run the code}\label{index_hiw_sec}
+The code, the instructions about prerequisites and how to run the installation can be found on \href{https://github.com/RobertaDelrio/GestureBasedControlMiro}\texttt{ Git\+Hub} \hypertarget{index_team_sec}{}\section{The Team}\label{index_team_sec}
+Roberta Delrio\+: {\itshape \href{mailto:roberta.delrio@studio.unibo.it}\texttt{ roberta.\+delrio@studio.\+unibo.\+it}} ~\newline
+ Sabrina Speranza\+: {\itshape \href{mailto:sabrina.speranza.ss.@gmail.com}\texttt{ sabrina.\+speranza.\+ss.@gmail.\+com}} 

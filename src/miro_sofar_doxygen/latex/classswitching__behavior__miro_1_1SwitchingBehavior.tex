@@ -1,0 +1,66 @@
+\hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior}{}\section{switching\+\_\+behavior\+\_\+miro.\+Switching\+Behavior Class Reference}
+\label{classswitching__behavior__miro_1_1SwitchingBehavior}\index{switching\+\_\+behavior\+\_\+miro.\+Switching\+Behavior@{switching\+\_\+behavior\+\_\+miro.\+Switching\+Behavior}}
+
+
+The class \mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior}{Switching\+Behavior}} allows to switch between the two possible behaviors based on the presence of an obstacle.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_a7ff242a8b8e3f6aa161760f8a1111410}\label{classswitching__behavior__miro_1_1SwitchingBehavior_a7ff242a8b8e3f6aa161760f8a1111410}} 
+def \mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_a7ff242a8b8e3f6aa161760f8a1111410}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_aa2ec67fcfd236ad1be80f5085dd1aa21}\label{classswitching__behavior__miro_1_1SwitchingBehavior_aa2ec67fcfd236ad1be80f5085dd1aa21}} 
+def \mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_aa2ec67fcfd236ad1be80f5085dd1aa21}{callback\+\_\+switching\+\_\+condition}} (self, sonar\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Callback that receives the data from the robot sensors, and uses the information given by the sonar sensor to evaluate the presence of an obstacle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_ae563101974a52b61eb45cdf6dfb9e4e8}\label{classswitching__behavior__miro_1_1SwitchingBehavior_ae563101974a52b61eb45cdf6dfb9e4e8}} 
+def \mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_ae563101974a52b61eb45cdf6dfb9e4e8}{callback\+\_\+gbb}} (self, gbb)
+\begin{DoxyCompactList}\small\item\em Callback that receives the Gesture Based Behavior as a platform\+\_\+control message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_a224069e95b06f6eaa28448a6020f93ea}\label{classswitching__behavior__miro_1_1SwitchingBehavior_a224069e95b06f6eaa28448a6020f93ea}} 
+def \mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_a224069e95b06f6eaa28448a6020f93ea}{callback\+\_\+oab}} (self, oab)
+\begin{DoxyCompactList}\small\item\em Callback that receives the Obstacle Avoidance Behavior as a platform\+\_\+control message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_af98b244af11f28fd396ad9b518c270ff}\label{classswitching__behavior__miro_1_1SwitchingBehavior_af98b244af11f28fd396ad9b518c270ff}} 
+def \mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_af98b244af11f28fd396ad9b518c270ff}{switching\+\_\+behavior}} (self)
+\begin{DoxyCompactList}\small\item\em Function that based on the value of the variable safe, that represent the presence of the obstacle, publish the behavior selected on Miro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_af878fdeb3e899baf9cd30e25e7998044}\label{classswitching__behavior__miro_1_1SwitchingBehavior_af878fdeb3e899baf9cd30e25e7998044}} 
+\mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_af878fdeb3e899baf9cd30e25e7998044}{robot\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em Allow to switch from real robot to simulation from launch file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_a1112b284035b50c5150a57caf8141a7a}\label{classswitching__behavior__miro_1_1SwitchingBehavior_a1112b284035b50c5150a57caf8141a7a}} 
+\mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_a1112b284035b50c5150a57caf8141a7a}{rate}}
+\begin{DoxyCompactList}\small\item\em Node rate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_a34015117ae228ea3fcc50aa3b8f7ad51}\label{classswitching__behavior__miro_1_1SwitchingBehavior_a34015117ae228ea3fcc50aa3b8f7ad51}} 
+\mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_a34015117ae228ea3fcc50aa3b8f7ad51}{danger\+\_\+threshold}}
+\begin{DoxyCompactList}\small\item\em Sonar theshold below which an obstacle is encountered. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_aa9fb625bc0cacabc182259c708b76f07}\label{classswitching__behavior__miro_1_1SwitchingBehavior_aa9fb625bc0cacabc182259c708b76f07}} 
+\mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_aa9fb625bc0cacabc182259c708b76f07}{safe}}
+\begin{DoxyCompactList}\small\item\em Signal if there is an obstacle or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_a37695a832fc2eda0b7d95921567dd730}\label{classswitching__behavior__miro_1_1SwitchingBehavior_a37695a832fc2eda0b7d95921567dd730}} 
+\mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_a37695a832fc2eda0b7d95921567dd730}{sub\+\_\+sonar\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Subscriber to the topic /platform/sensors a message of type platform\+\_\+sensors that cointains the sonar readings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_afcea4d81d5d5d8ac35e185be543c78c9}\label{classswitching__behavior__miro_1_1SwitchingBehavior_afcea4d81d5d5d8ac35e185be543c78c9}} 
+\mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_afcea4d81d5d5d8ac35e185be543c78c9}{q\+\_\+gbb}}
+\begin{DoxyCompactList}\small\item\em platform\+\_\+control object that rapresents the Gesture Based Behavior \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_af4d22aa3a2e444bf596db816dcc6d7ba}\label{classswitching__behavior__miro_1_1SwitchingBehavior_af4d22aa3a2e444bf596db816dcc6d7ba}} 
+\mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_af4d22aa3a2e444bf596db816dcc6d7ba}{sub\+\_\+gbb}}
+\begin{DoxyCompactList}\small\item\em Subscriber to the topic /gbb a message of type platform\+\_\+control that rapresents the Gesture Based Behavior. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_ab6ecf6be83cdbd32e2467a4569b98c61}\label{classswitching__behavior__miro_1_1SwitchingBehavior_ab6ecf6be83cdbd32e2467a4569b98c61}} 
+\mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_ab6ecf6be83cdbd32e2467a4569b98c61}{q\+\_\+oab}}
+\begin{DoxyCompactList}\small\item\em platform\+\_\+control object that rapresents the Obstacle Avoidance Behavior \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_a91a3fb683593636854dbccfd053c4712}\label{classswitching__behavior__miro_1_1SwitchingBehavior_a91a3fb683593636854dbccfd053c4712}} 
+\mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_a91a3fb683593636854dbccfd053c4712}{sub\+\_\+oab}}
+\begin{DoxyCompactList}\small\item\em Subscriber to the topic /oab a message of type platform\+\_\+control that rapresents the Obstacle Avoidance Behavior. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classswitching__behavior__miro_1_1SwitchingBehavior_a8cddaa9fb7106bd6724c4276c58c0cee}\label{classswitching__behavior__miro_1_1SwitchingBehavior_a8cddaa9fb7106bd6724c4276c58c0cee}} 
+\mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior_a8cddaa9fb7106bd6724c4276c58c0cee}{pub\+\_\+behavior}}
+\begin{DoxyCompactList}\small\item\em Publisher to the topic /platform/control on the robot a message of type platform\+\_\+control that represents the selected behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class \mbox{\hyperlink{classswitching__behavior__miro_1_1SwitchingBehavior}{Switching\+Behavior}} allows to switch between the two possible behaviors based on the presence of an obstacle. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/emaro/catkin\+\_\+ws/src/miro\+\_\+sofar/src/scripts/\mbox{\hyperlink{switching__behavior__miro_8py}{switching\+\_\+behavior\+\_\+miro.\+py}}\end{DoxyCompactItemize}
