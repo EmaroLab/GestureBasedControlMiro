@@ -35,6 +35,8 @@ Miro by performing specific gestures. Basically, the data from the smartwatch's 
  But, before this the user must suggest to the robot, in wich direction it should turn.
  Once the collision has been avoided the control goes back to the user.
 
+ ![GestureBasedControlMiro_Sofar_architecture](https://ibb.co/if4sfU)
+
  ## The implementation 
 
  Each module which is part of the architecture has been implemented as a ROS node.
