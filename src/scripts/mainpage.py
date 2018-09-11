@@ -26,6 +26,7 @@
 ## @n  When an Obstacle is detected the Robot's body becomes red to signal the dangerous situation to the user. It starts turning of few degrees until the obstacle is not detected anymore.
 ## @n But, before this the user must suggest the robot in wich direction turning.
 ## Once the collision has been avoided the control goes back to the user.
+## \image html sofar_architecture.png
 ## \section det_sec The implementation
 ## The Robot Miro presents itself as a ROS node.
 ## @n Each module of the architecture has been implemente as a ROS node.

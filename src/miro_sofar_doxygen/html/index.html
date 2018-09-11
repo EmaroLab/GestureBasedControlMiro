@@ -100,8 +100,10 @@ The <em>ADVANCED</em> mode allows a smoother but more sensitive control, enablin
 Obstacle Avoidance Behavior</h2>
 <p class="">The <b>Obstacle Avoidance behavior</b> overrides the Gesture Based behavior when and obstacle is detected by using the Robot's Sonar. <br />
  When an Obstacle is detected the Robot's body becomes red to signal the dangerous situation to the user. It starts turning of few degrees until the obstacle is not detected anymore. <br />
- But, before this the user must suggest the robot in wich direction turning. Once the collision has been avoided the control goes back to the user. </p>
-<h1><a class="anchor" id="det_sec"></a>
+ But, before this the user must suggest the robot in wich direction turning. Once the collision has been avoided the control goes back to the user. </p><div class="image">
+<img src="sofar_architecture.png" alt="sofar_architecture.png"/>
+</div>
+ <h1><a class="anchor" id="det_sec"></a>
 The implementation</h1>
 <p class="">The Robot Miro presents itself as a ROS node. <br />
  Each module of the architecture has been implemente as a ROS node. <br />
