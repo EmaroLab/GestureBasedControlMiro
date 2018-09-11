@@ -1,7 +1,7 @@
  # Gesture Based Control of MiRo Robot
 
  ## The Project
- The main goal of the project is to guide MiRo using a wearable device though specific gestures.
+ The main goal of the project is to guide MiRo using a wearable device through specific gestures.
  The Robot must be able to override the users command when an obstacle is detected in order to avoid collision with it.
  This Project has been developed for the Software Architecture course of the master degree program in Robotics Engineering at University of Genoa.
 
@@ -22,7 +22,7 @@
  
  The **Gesture Based behavior** regards the robot's ability to follow the user's command. The user must wear a smartwatch in order to control
 Miro by performing specific gestures. Basically, the data from the smartwatch's accelerometer are converted into input for MiRo control.
- In particular, depending on the accelerometer values are set some specific lights pattern of Miro's body and Miro's body linear and angular velocities.
+ In particular, depending on the accelerometer values we set, (1) some specific lights pattern in Miro's body and (2) Miro's linear and angular velocities.
  
  Two modalities of control are available: *BASIC* and *ADVANCED*
  * The *BASIC* mode is basically a step control that allows Miro to stay still, rotate left/right, go straight forward/backward only. 
@@ -30,30 +30,30 @@ Miro by performing specific gestures. Basically, the data from the smartwatch's 
  * The *ADVANCED* mode allows a smoother but more sensitive control, enabling combination of basic commands. e.g turn left and go forward
  This mode allows an expert user to perform more complex trajectories and to exert a more natural control.
 
- The **Obstacle Avoidance behavior** overrides the Gesture Based behavior when and obstacle is detected by using the Robot's Sonar.
- When an Obstacle is detected the Robot's body becomes red to signal the dangerous situation to the user. It starts turning of few degrees until the obstacle is not detected anymore.
- But, before this the user must suggest the robot in wich direction turning.
+ The **Obstacle Avoidance behavior** overrides the Gesture Based behavior when and obstacle is detected by using the Miro's sonar sensor.
+ When an Obstacle is detected the Miro's body becomes red to signal 'dangerous situation' to the user. It starts turning by a few degrees until the obstacle is not detected anymore.
+ But, before this the user must suggest to the robot, in wich direction it should turn.
  Once the collision has been avoided the control goes back to the user.
 
  ## The implementation 
 
- Each module which is part of the architecture has been implemente as a ROS node.
+ Each module which is part of the architecture has been implemented as a ROS node.
 
- For comunication between the nodes has been used a Publish/Subscibe messaging pattern.
+ For comunication between the nodes we use a Publish/Subscibe messaging pattern.
 
 In order to allow the smartwatch to communicate with the ROS Master, the imu
-stream app must be installed on both smartwatch and smartphone paired.
+stream app must be installed on both smartwatch and smartphone (paired).
 The  imu stream  is  used  to  stream  IMU  data  from smartwatch to an MQTT broker.
 The  mqtt_ros_bridge is  a  bridge  that  allows  to subscribe to MQTT topics and publish contents of MQTT messages to ROS.
 
- The *imu_data_map* node subscribes to the smartwatch's accelerometer data published by MQTT broker and maps the linear accellerations into linear and angular velocities and publish them.
+ The *imu_data_map* node subscribes to the smartwatch's accelerometer data published by MQTT broker and maps the linear accelerations to linear and angular velocities, and publish them.
 
  The *gbb_miro* node uses these velocities to publish a message of type platform_control that contains miro body velocity and miro body lights pattern.
 
- The *oab_miro* node subscibes to sonar sensor to detect the presence of an obstacle, and publish a message of type platform_control that contains miro body velocity and miro body lights pattern. 
+ The *oab_miro* node subscibes to sonar sensor to detect the presence of an obstacle, and publishes a message of type platform_control that contains miro body velocity and miro body lights pattern. 
  
  The *switching_behavior* node subscribes to both platform_control messages from gbb_miro and oab_miro that corresponds to the two different behaviors.
- It decides which behavior to publish on the Robot depending on the presence or not of the obstacle.
+ It decides which behavior to publish on the Robot depending on the presence (or not) of an obstacle.
 
  This architecture has been developed to be modular and scalable, since each behavior can be easily modified or substituted, and new behaviours can be easily added.
  Starting from this software architecture another project has been developed with more and complex behaviors, *e.g a more complete Obstacle Avoidance strategy based on BUG2 Algorithm has been used as Obstacle Avoidance behavior.*
@@ -111,7 +111,7 @@ In a new terminal
 ```
 $ mosquitto
 ```
-Make sure that the IP in the IMU_stream app on the smartphone is the same showed by doing
+Make sure that the IP in the IMU_stream app on the smartphone is the same shown by doing
 
 ```
 $ ifconfig
