@@ -152,7 +152,7 @@ Parameters that can be set in the launch file ( all of them are explained inside
 * control_mode <-- Select the BASIC or ADVANCED mode
 * sonar_treshold <-- Select the values below which an obstacle is detected
 ## Results
-Video Demo with a Real Miro [![Video Demo with a Real Miro](https://img.youtube.com/vi/watch?v=LT71kVHBBu4/0.jpg)](https://www.youtube.com/watch?v=LT71kVHBBu4&feature=youtu.be).
+Video Demo with a Real Miro [![Video Demo with a Real Miro](https://img.youtube.com/vi/LT71kVHBBu4/0.jpg)](https://www.youtube.com/watch?v=LT71kVHBBu4&feature=youtu.be).
 
 ## Documentation
 The documentation of the code can be found on the folder miro_sofar_doxygen/html by opening the file index.html with an html browser
