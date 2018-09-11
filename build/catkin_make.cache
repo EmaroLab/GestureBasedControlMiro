@@ -1,0 +1,2 @@
+.
+-DCATKIN_DEVEL_PREFIX=/home/emaro/catkin_ws/src/miro_sofar/devel -DCMAKE_INSTALL_PREFIX=/home/emaro/catkin_ws/src/miro_sofar/install -G Unix Makefiles
