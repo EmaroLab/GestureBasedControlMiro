@@ -63,15 +63,15 @@ class ObstacleAvoidance():
         
         ## Subscriber to the topic /platform/sensors a message of type platform_sensors that cointains the sonar readings
         self.sub_sonar_data = rospy.Subscriber(topic_root + "/platform/sensors", platform_sensors, self.callback_oab,queue_size=1)
-        ## Subscriber to the topic /inertial or better imu mapping a message of type IMU or Twist
-        self.sub_imu_data = rospy.Subscriber('/inertial',Imu,self.callback_last_command,queue_size=1)
+        ## Subscriber to the topic /imu_mapping a message of type Twist
+        self.sub_imu_data = rospy.Subscriber('/imu_mapping',Twist,self.callback_last_command,queue_size=1)
         ## Publisher to the topic /oab a message of type platform_control which corresponds to the Obstacle Avoidance Behavior
         self.pub_platform_control = rospy.Publisher('/oab', platform_control, queue_size=0)
 
     ## Callback function that receive and save the user's command regarding in which direction start turning to avoid the obstacle
     def callback_last_command(self, sw_data):
 
-        self.last_command = sw_data.linear_acceleration.y
+        self.last_command = sw_data.angular.z
         
     ## Callback that receives the data from the robot sensors, and uses the information given by the sonar sensor to evaluate the presence of an obstacle.
     ## @n If an obstacle is detected then is used the information related to the user's comand to start turning in one direction of few degree.
